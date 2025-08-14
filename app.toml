@@ -1,0 +1,25 @@
+[Details]
+Icon = "../../theme/icons/fyne.png"
+Name = "MyPicViu"
+ID = "MyPicViu.2025.0814"
+Version = "0.0.1"
+Build = 1
+
+[Migrations]
+fyneDo = true
+
+[Source]
+Repo = "https://github.com/mangenotwork/MyPicViu"
+Dir = "./"
+
+[Development]
+HelperText = "This binary was built with debug symbols"
+
+[Release]
+HelperText = "This binary was built without debug symbols"
+
+[LinuxAndBSD]
+GenericName = "MyPicViu"
+Categories = ["Development"]
+Comment = "MyPicViu 我的图片查看器"
+Keywords = ["MyPicViu", "fyne"]
