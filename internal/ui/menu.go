@@ -145,7 +145,7 @@ func openImgFile(win fyne.Window) {
 		defer reader.Close()
 
 		log.Println(reader.URI().Name())
-		dataManager.AddRootNode(reader.URI().Name())
+		dataManager.AddRootFileNode(reader.URI().Name(), reader.URI().Path())
 
 	}, win)
 	fd.SetFilter(storage.NewExtensionFileFilter([]string{".png", ".jpg", ".jpeg"}))

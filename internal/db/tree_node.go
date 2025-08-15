@@ -13,6 +13,7 @@ import (
 type TreeNode struct {
 	ID       string      // 节点唯一标识
 	Name     string      // 节点显示名称
+	FilePath string      // 文件路径
 	Children []*TreeNode // 子节点
 	IsFile   bool        // 区分文件(叶子)和文件夹(分支)
 	Parent   *TreeNode   // 父节点引用
@@ -118,11 +119,12 @@ func buildTreeData() []*TreeNode {
 }
 
 // 在根节点动态添加节点
-func (m *TreeDataManager) AddRootNode(name string) bool {
+func (m *TreeDataManager) AddRootFileNode(name, filePath string) bool {
 	newNode := &TreeNode{
-		ID:     name,
-		Name:   name,
-		IsFile: true,
+		ID:       name,
+		Name:     name,
+		FilePath: filePath,
+		IsFile:   true,
 	}
 
 	// 添加到根节点
@@ -148,6 +150,7 @@ func (m *TreeDataManager) AddRootDirNode(dir string) bool {
 	newNode := &TreeNode{
 		ID:       dir, // 使用更安全的唯一ID
 		Name:     dir, // 显示目录名而非完整路径
+		FilePath: dir,
 		IsFile:   false,
 		Children: make([]*TreeNode, 0),
 		Parent:   nil, // 根节点没有父节点
@@ -193,6 +196,7 @@ func traverseDir(path string, parentNode *TreeNode, nodeMap map[string]*TreeNode
 			dirNode := &TreeNode{
 				ID:       fullPath,
 				Name:     entry.Name(),
+				FilePath: fullPath,
 				IsFile:   false,
 				Children: make([]*TreeNode, 0),
 				Parent:   parentNode, // 正确设置父节点为当前的parentNode
@@ -213,6 +217,7 @@ func traverseDir(path string, parentNode *TreeNode, nodeMap map[string]*TreeNode
 			fileNode := &TreeNode{
 				ID:       fullPath,
 				Name:     entry.Name(),
+				FilePath: fullPath,
 				IsFile:   true,
 				Children: make([]*TreeNode, 0),
 				Parent:   parentNode, // 正确设置父节点
@@ -301,38 +306,11 @@ func CreateCustomTree(treeData []*TreeNode) (*widget.Tree, *TreeDataManager) {
 	// 创建树组件
 	tree := widget.NewTree(
 		// 节点ID获取函数：根据父节点ID返回子节点ID列表
-		//func(id widget.TreeNodeID) []widget.TreeNodeID {
-		//	if id == "" { // 根节点
-		//		ids := make([]widget.TreeNodeID, len(treeData))
-		//		for i, node := range treeData {
-		//			ids[i] = node.ID
-		//		}
-		//		return ids
-		//	}
-		//
-		//	// 查找对应节点并返回其子节点ID
-		//	node := FindNode(treeData, id)
-		//	if node == nil {
-		//		return []widget.TreeNodeID{}
-		//	}
-		//
-		//	ids := make([]widget.TreeNodeID, len(node.Children))
-		//	for i, child := range node.Children {
-		//		ids[i] = child.ID
-		//	}
-		//	return ids
-		//},
 		dataManager.GetChildrenIDs,
+
 		// 分支判断函数：判断节点是否为分支(文件夹)
-		//func(id widget.TreeNodeID) bool {
-		//	if id == "" { // 根节点视为分支
-		//		return true
-		//	}
-		//
-		//	node := FindNode(treeData, id)
-		//	return node != nil && !node.IsFile
-		//},
 		dataManager.IsBranch,
+
 		// 模板创建函数：创建分支和叶子节点的UI模板
 		func(branch bool) fyne.CanvasObject {
 			if branch {
@@ -340,6 +318,7 @@ func CreateCustomTree(treeData []*TreeNode) (*widget.Tree, *TreeDataManager) {
 			}
 			return widget.NewLabel("叶子模板")
 		},
+
 		// 数据绑定函数：将节点数据绑定到UI组件
 		func(id widget.TreeNodeID, branch bool, o fyne.CanvasObject) {
 			node := FindNode(treeData, id)
@@ -347,7 +326,6 @@ func CreateCustomTree(treeData []*TreeNode) (*widget.Tree, *TreeDataManager) {
 				o.(*widget.Label).SetText(id)
 				return
 			}
-
 			text := node.Name
 			if branch {
 				text += " (分支)"
