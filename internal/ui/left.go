@@ -41,6 +41,11 @@ func LeftContainer() *fyne.Container {
 			log.Println("打开图片文件失败", err)
 			return
 		}
+
+		defer func() {
+			_ = reader.Close()
+		}()
+
 		imgData, _, err := image.Decode(reader)
 		if err != nil {
 			log.Println("读取图片文件失败", err)
@@ -84,6 +89,7 @@ func LeftContainer() *fyne.Container {
 		imgView1Container.Add(createContent(imgObj, &scale, &originalSize))
 		imgView1Container.Refresh()
 
+		// 计算颜色分布
 		go func() {
 			colorData := img.GetClusters(imgData)
 
@@ -93,12 +99,30 @@ func LeftContainer() *fyne.Container {
 			barImage := createColorBarImage(colorData, int(totalWidth), int(barHeight))
 
 			// 转换为Fyne可显示的图片对象
-			fyneImage := canvas.NewImageFromImage(barImage)
-			fyneImage.FillMode = canvas.ImageFillOriginal // 保持原始尺寸
+			fyne.Do(func() {
+				barImageContainer := canvas.NewImageFromImage(barImage)
+				barImageContainer.FillMode = canvas.ImageFillOriginal // 保持原始尺寸
 
-			imgView2Container.RemoveAll()
-			imgView2Container.Add(fyneImage)
-			imgView2Container.Refresh()
+				imgView2Container.RemoveAll()
+				imgView2Container.Add(barImageContainer)
+				imgView2Container.Refresh()
+			})
+		}()
+
+		// 计算图片信息
+		go func() {
+			info := &img.ImgInfo{
+				FilePath: node.FilePath,
+				Width:    imgData.Bounds().Dx(),
+				Height:   imgData.Bounds().Dy(),
+			}
+			info.GetFileInfo()
+			info.GetImgInfo()
+
+			fyne.Do(func() {
+				setImgInfoText(info)
+			})
+
 		}()
 
 	}

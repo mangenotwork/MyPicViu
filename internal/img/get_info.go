@@ -1,38 +1,210 @@
 package img
 
+import (
+	"crypto/md5"
+	"encoding/hex"
+	"fmt"
+	"image"
+	_ "image/jpeg"
+	_ "image/png"
+	"io"
+	"log"
+	"os"
+	"time"
+)
+
 // 获取图片信息
 type ImgInfo struct {
-	FileName          string  // 图片文件名
-	FileSize          int64   // 图片文件大小
-	FileMd5           string  // 图片文件md5
-	FilePath          string  // 图片文件路径
-	FileMode          string  // 权限
-	FileModTime       string  // 最后修改时间
-	FileSys           string  // 系统原生信息
-	ImgWidth          int     // 图片宽
-	ImgHeight         int     // 图片高
-	ImgDPI            int     // 图片dpi
-	ImgBit            int     // 图片是多少位的
-	ImgMimeType       string  // 图片MIME类型
-	ImgOrientation    int     // 图片方向
-	ImgCameraMake     string  // 图片相机制造商
-	ImgCameraModel    string  // 相机型号
-	ImgDateTime       string  // 拍摄时间
-	ImgFocalLength    string  // 焦距
-	ImgISO            string  // iso
-	ImgAperture       string  // 光圈
-	ImgShutterSpeed   string  // 快门
-	ImgSaturation     float64 // 图片饱和度值
-	ImgBrightness     float64 // 图片亮度值
-	ImgContrast       float64 // 图片对比度值
-	ImgSharpness      float64 // 图片锐度值
-	ImgExposure       float64 // 图片曝光度值
-	ImgTemperature    float64 // 图片色温值
-	ImgHue            float64 // 图片色调值
-	ImgNoise          float64 // 图片噪点值
-	ImgDifferenceHash string  // 图片的差异哈希值获取图像的指纹字符串
-	ImgPHash          string  // 感知哈希算法获取图像的指纹字符串
-	ImgAverageHash    string  // 均值哈希值获取图像的指纹字符串
+	FileName       string         // 图片文件名
+	FileSize       int64          // 图片文件大小
+	FileMd5        string         // 图片文件md5
+	FilePath       string         // 图片文件路径
+	FileMode       string         // 权限
+	FileModTime    string         // 最后修改时间
+	FileSys        string         // 系统原生信息
+	Width          int            // 图片宽
+	Height         int            // 图片高
+	Format         string         // 图片格式
+	DPI            int            // 图片dpi
+	Bit            int            // 图片是多少位的
+	MimeType       string         // 图片MIME类型
+	Orientation    int            // 图片方向
+	CameraMake     string         // 图片相机制造商
+	CameraModel    string         // 相机型号
+	DateTime       string         // 拍摄时间
+	FocalLength    string         // 焦距
+	ISO            string         // iso
+	Aperture       string         // 光圈
+	ShutterSpeed   string         // 快门
+	Saturation     float64        // 图片饱和度值
+	Brightness     float64        // 图片亮度值
+	Contrast       float64        // 图片对比度值
+	Sharpness      float64        // 图片锐度值
+	Exposure       ExposureResult // 图片曝光度值
+	Temperature    float64        // 图片色温值
+	Hue            float64        // 图片色调值
+	Noise          float64        // 图片噪点值
+	DifferenceHash string         // 图片的差异哈希值获取图像的指纹字符串
+	PHash          string         // 感知哈希算法获取图像的指纹字符串
+	AverageHash    string         // 均值哈希值获取图像的指纹字符串
 }
 
-// todo ...
+func (info *ImgInfo) GetFileInfo() {
+	fileInfo, err := os.Stat(info.FilePath)
+	if err != nil {
+		// 处理错误（如文件不存在）
+		if os.IsNotExist(err) {
+			log.Printf("文件不存在: %s\n", info.FilePath)
+		} else if os.IsPermission(err) {
+			log.Printf("没有权限访问文件: %s\n", info.FilePath)
+		} else {
+			log.Printf("获取文件信息失败: %v\n", err)
+		}
+		return
+	}
+
+	info.FileName = fileInfo.Name()
+	info.FileSize = fileInfo.Size()
+	info.FileMode = fileInfo.Mode().String()
+	info.FileModTime = fileInfo.ModTime().Format(time.RFC3339) // 最后修改时间
+	info.FileSys = fmt.Sprintf("%+v", fileInfo.Sys())
+
+}
+
+func (info *ImgInfo) GetImgInfo() {
+	// 打开文件
+	file, err := os.Open(info.FilePath)
+	if err != nil {
+		log.Println("无法打开文件:", err)
+		return
+	}
+	defer file.Close()
+
+	imgConfig, format, err := image.DecodeConfig(file)
+	if err != nil {
+		log.Printf("无法解析图片: %w", err)
+		return
+	}
+	info.Width = imgConfig.Width
+	info.Height = imgConfig.Height
+	info.Format = format
+
+	// 创建MD5哈希计算器
+	hash := md5.New()
+
+	// 以流的方式读取文件并更新哈希（适合大文件）
+	hashFile, err := CopyFileHandle(file)
+	defer hashFile.Close()
+	if err != nil {
+		log.Println("copy文件失败")
+		return
+	}
+	if _, err := io.Copy(hash, hashFile); err != nil {
+		log.Println("读取文件失败:", err)
+	}
+
+	// 计算最终哈希值并转换为十六进制字符串
+	md5Sum := hex.EncodeToString(hash.Sum(nil))
+	info.FileMd5 = md5Sum
+
+	log.Println("图片宽高格式 : ", info.Width, "|", info.Height, "|", info.Format)
+
+	exifFile, err := CopyFileHandle(file)
+	defer exifFile.Close()
+	if err != nil {
+		log.Println("copy文件失败")
+		return
+	}
+	info.GetExif(exifFile)
+
+	imgFile, err := CopyFileHandle(file)
+	if err != nil {
+		log.Println("copy文件失败")
+		return
+	}
+	imgData, _, err := image.Decode(imgFile)
+	if err != nil {
+		log.Println("读取图片文件失败", err)
+		return
+	}
+
+	info.Saturation, err = calculateImageSaturation(imgData)
+	if err != nil {
+		log.Println("获取饱和度失败：", err)
+	}
+	log.Println("饱和度 ： ", info.Saturation)
+
+	info.Brightness, err = calculateImageBrightness(imgData)
+	if err != nil {
+		log.Println("获取亮度失败：", err)
+	}
+	log.Println("亮度 ： ", info.Saturation)
+
+	info.Contrast, err = calculateImageContrast(imgData)
+	if err != nil {
+		log.Println("获取对比度失败：", err)
+	}
+	log.Println("对比度 ： ", info.Saturation)
+
+	info.Sharpness, err = calculateImageSharpness(imgData)
+	if err != nil {
+		log.Println("获取锐度失败：", err)
+	}
+	log.Println("锐度 ： ", info.Saturation)
+
+	info.Exposure, err = calculateImageExposure(imgData)
+	if err != nil {
+		log.Println("获取曝光度失败：", err)
+	}
+	log.Println("曝光度 ： ", info.Exposure.ExposureRating)
+
+	info.Temperature, err = calculateImageColorTemperature(imgData)
+	if err != nil {
+		log.Println("获取色温失败：", err)
+	}
+	log.Println("色温 ： ", info.Temperature)
+
+	info.Hue, _, err = calculateImageHue(imgData)
+	if err != nil {
+		log.Println("获取色调失败：", err)
+	}
+	log.Println("色调 ： ", info.Temperature)
+
+	info.Noise, err = calculateImageNoise(imgData)
+	if err != nil {
+		log.Println("获取噪点值失败：", err)
+	}
+	log.Println("噪点值 ： ", info.Temperature)
+
+	info.DifferenceHash = differenceHash(imgData)
+	info.PHash = pHash(imgData)
+	info.AverageHash = averageHash(imgData)
+
+	log.Println("指纹1 ", info.DifferenceHash)
+	log.Println("指纹2 ", info.PHash)
+	log.Println("指纹3 ", info.AverageHash)
+}
+
+// CopyFileHandle 创建一个新的*os.File句柄，指向与源文件相同的路径
+func CopyFileHandle(src *os.File) (*os.File, error) {
+	// 获取源文件的路径
+	path := src.Name()
+
+	// 获取源文件的打开模式（只读、读写等）
+	// 注意：需要根据实际需求调整模式，这里假设源文件是可读的
+	mode := os.O_RDONLY
+	if src.Fd() >= 0 {
+		// 简单判断是否可写（实际场景可能需要更复杂的权限检查）
+		if _, err := src.WriteString(""); err == nil {
+			mode = os.O_RDWR // 源文件可写，则新句柄也以读写模式打开
+		}
+	}
+
+	// 再次打开文件，创建新的句柄
+	newFile, err := os.OpenFile(path, mode, 0644)
+	if err != nil {
+		return nil, fmt.Errorf("无法创建新文件句柄: %w", err)
+	}
+
+	return newFile, nil
+}
