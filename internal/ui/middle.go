@@ -8,23 +8,11 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 	"image/color"
 	_ "image/jpeg"
 	_ "image/png"
-)
-
-// 图片视图区 1 图片显示 上
-var imgView1Container = container.NewStack(
-//layout.NewSpacer(), // 底部留白
-)
-
-// 图片色值分布区  2 下
-var imgView2Container = container.NewVBox(
-	canvas.NewText("图片色值分布区  2 下", color.Gray{100}),
-	layout.NewSpacer(), // 底部留白
 )
 
 // 图片信息与交互区  在右边
@@ -35,39 +23,25 @@ var ImgInfoTextContainer = widget.NewAccordion()
 
 func MiddleContainer() *container.Split {
 
-	//// 图片视图区 在左边
-
-	// 图片视图区 1 图片显示 上
-	//imgView1Container := container.NewVBox(
-	//	canvas.NewText("图片视图区 1 图片显示 上", color.Gray{100}),
-	//	layout.NewSpacer(), // 底部留白
-	//)
 	background := canvas.NewRectangle(color.Black)
-	//background.SetMinSize(fyne.NewSize(0, 0))
-	imgView1Container.Add(background)
-	//// 图片色值分布区  2 下
-	//imgView2Container := container.NewVBox(
-	//	canvas.NewText("图片色值分布区  2 下", color.Gray{100}),
-	//	layout.NewSpacer(), // 底部留白
-	//)
-
-	imgViewContainer := container.NewVSplit(imgView1Container, imgView2Container)
+	ImgViewContainer.Add(background)
+	imgViewContainer := container.NewVSplit(ImgViewContainer, ImgColorClustersViewContainer)
 	imgViewContainer.SetOffset(0.9)
 
 	ImgInfoTextContainer.Append(&widget.AccordionItem{
 		Title:  "文件信息",
 		Detail: imgFileInfoDetail,
-		Open:   true,
+		Open:   false,
 	})
 	ImgInfoTextContainer.Append(&widget.AccordionItem{
 		Title:  "基础信息",
 		Detail: imgBaseInfoDetail,
-		Open:   true,
+		Open:   false,
 	})
 	ImgInfoTextContainer.Append(&widget.AccordionItem{
 		Title:  "色彩属性",
 		Detail: imgColorInfoDetail,
-		Open:   true,
+		Open:   false,
 	})
 	ImgInfoTextContainer.Append(&widget.AccordionItem{
 		Title:  "📷 拍摄参数",
@@ -96,14 +70,6 @@ func MiddleContainer() *container.Split {
 	middleContainer := container.NewHSplit(imgViewContainer, imgOperateContainer)
 	middleContainer.SetOffset(0.7) // 左侧占比25%
 
-	//contentContent := canvas.NewText("", color.Gray{100})
-	//// 中间显示区域：垂直布局，添加边距
-	//middleContainer := container.NewVBox(
-	//	container.NewPadded(contentTitle),
-	//	canvas.NewLine(color.Gray{200}), // 分隔线
-	//	container.NewPadded(contentContent),
-	//	layout.NewSpacer(), // 底部留白
-	//)
 	return middleContainer
 }
 
@@ -168,4 +134,7 @@ func setImgInfoText(info *img.ImgInfo) {
 	imgFingerprintInfoDetail.Objects[0].Move(fyne.NewPos(20, 0))
 	imgFingerprintInfoDetail.Refresh()
 
+	ImgInfoTextContainer.Open(0)
+	ImgInfoTextContainer.Open(1)
+	ImgInfoTextContainer.Open(2)
 }

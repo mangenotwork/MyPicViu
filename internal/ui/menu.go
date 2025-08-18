@@ -4,23 +4,19 @@ import (
 	"MyPicViu/common/logger"
 	"fmt"
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/cmd/fyne_settings/settings"
-	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/driver/desktop"
 	"fyne.io/fyne/v2/storage"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
-	"io"
 	"net/url"
 )
 
-// 菜单
+// MakeMenu 菜单
 func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
 	newItem := fyne.NewMenuItem("打开", nil)
 	fileItem := fyne.NewMenuItem("打开图片", func() {
-		logger.Debug("Menu New->File")
 		openImgFile(w)
 	})
 	fileItem.Icon = theme.FileIcon()
@@ -62,13 +58,15 @@ func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
 			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
 			_ = a.OpenURL(u)
 		}),
+		fyne.NewMenuItem("新版本", func() {
+			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
+			_ = a.OpenURL(u)
+		}),
 		fyne.NewMenuItemSeparator(),
 		fyne.NewMenuItem("联系作者", func() {
 			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
 			_ = a.OpenURL(u)
 		}))
-
-	updateMenu := fyne.NewMenu("检查更新")
 
 	// a quit item will be appended to our first (File) menu
 	file := fyne.NewMenu("文件", newItem)
@@ -80,7 +78,6 @@ func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
 	return fyne.NewMainMenu(
 		file,
 		helpMenu,
-		updateMenu,
 	)
 }
 
@@ -112,6 +109,12 @@ func openFile(win fyne.Window) {
 					// 用户点击了"确定"按钮，执行相应操作
 					logger.Debug("用户确认了操作")
 					// 可以在这里添加确认后的逻辑，比如实际打开目录
+
+					if dataManager.GetNodeMapLen() == 0 {
+						LeftContainer.Remove(OpenInitContainer)
+						LeftContainer.Add(tree)
+						LeftContainer.Refresh()
+					}
 
 					// 遍历目录
 					dataManager.AddRootDirNode(list.Path())
@@ -145,33 +148,16 @@ func openImgFile(win fyne.Window) {
 		defer reader.Close()
 
 		logger.Debug(reader.URI().Name())
+
+		if dataManager.GetNodeMapLen() == 0 {
+			LeftContainer.Remove(OpenInitContainer)
+			LeftContainer.Add(tree)
+			LeftContainer.Refresh()
+		}
+
 		dataManager.AddRootFileNode(reader.URI().Name(), reader.URI().Path())
 
 	}, win)
 	fd.SetFilter(storage.NewExtensionFileFilter([]string{".png", ".jpg", ".jpeg"}))
 	fd.Show()
-}
-
-func showImage(f fyne.URIReadCloser) {
-	img := loadImage(f)
-	if img == nil {
-		return
-	}
-	img.FillMode = canvas.ImageFillOriginal
-
-	w := fyne.CurrentApp().NewWindow(f.URI().Name())
-	w.SetContent(container.NewScroll(img))
-	w.Resize(fyne.NewSize(320, 240))
-	w.Show()
-}
-
-func loadImage(f fyne.URIReadCloser) *canvas.Image {
-	data, err := io.ReadAll(f)
-	if err != nil {
-		fyne.LogError("Failed to load image data", err)
-		return nil
-	}
-	res := fyne.NewStaticResource(f.URI().Name(), data)
-
-	return canvas.NewImageFromResource(res)
 }

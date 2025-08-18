@@ -1,16 +1,99 @@
 package ui
 
 import (
+	"MyPicViu/common/logger"
+	"MyPicViu/internal/db"
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
-	"image/color"
+	"fyne.io/fyne/v2/layout"
+	"fyne.io/fyne/v2/widget"
 )
 
-func MainContent() *container.Split {
+var tree *widget.Tree               // 目录树的UI组件
+var dataManager *db.TreeDataManager // 目录树的数据管理
+
+func InitUI() {
+	logger.Debug("初始化UI")
+	tree, dataManager = db.CreateCustomTree(db.TreeData)
+	tree.OnSelected = TreeOnSelected()
+}
+
+func MainContent(w fyne.Window) *container.Split {
+	LeftContainerInit(w)
 	// 主布局：左右分割
-	mainContent := container.NewHSplit(LeftContainer(), MiddleContainer())
+	mainContent := container.NewHSplit(LeftContainer, MiddleContainer())
 	mainContent.SetOffset(0.2) // 左侧占比20%
 	return mainContent
 }
 
-var contentTitle = canvas.NewText("请选择左侧目录项", color.Black)
+// LeftContainer 最左边的目录文件列表树
+var LeftContainer = container.New(layout.NewStackLayout())
+
+// ImgViewContainer 图片视图区 图片显示 上
+var ImgViewContainer = container.NewStack()
+
+// ImgColorClustersViewContainer 图片色值分布区 图片显示 下
+var ImgColorClustersViewContainer = container.NewStack()
+
+// OpenInitContainer 初始化打开图片的按钮
+var OpenInitContainer = container.New(layout.NewVBoxLayout())
+
+// 创建包含图片和控制按钮的内容
+func createContent(img *canvas.Image, scale *float64, originalSize *fyne.Size) fyne.CanvasObject {
+	// 放大按钮
+	zoomInBtn := widget.NewButton("放大", func() {
+		if img == nil {
+			return
+		}
+		*scale += 0.2
+		updateImageSize(img, scale, originalSize)
+	})
+
+	// 缩小按钮
+	zoomOutBtn := widget.NewButton("缩小", func() {
+		if img == nil {
+			return
+		}
+		*scale -= 0.2
+		if *scale < 0.2 { // 限制最小缩放
+			*scale = 0.2
+		}
+		updateImageSize(img, scale, originalSize)
+	})
+
+	// 重置按钮
+	resetBtn := widget.NewButton("重置大小", func() {
+		if img == nil {
+			return
+		}
+		*scale = 1.0
+		updateImageSize(img, scale, originalSize)
+	})
+
+	// 按钮容器
+	controls := container.NewHBox(
+		//openNewBtn,
+		zoomInBtn,
+		zoomOutBtn,
+		resetBtn,
+	)
+
+	// 图片容器（使用滚动容器，方便查看大图）
+	scrollContainer := container.NewScroll(img)
+	scrollContainer.SetMinSize(fyne.NewSize(originalSize.Width, originalSize.Height))
+
+	// 主容器
+	return container.NewVBox(
+		controls,
+		scrollContainer,
+	)
+}
+
+// 更新图片大小
+func updateImageSize(img *canvas.Image, scale *float64, originalSize *fyne.Size) {
+	newWidth := float32(*scale) * originalSize.Width
+	newHeight := float32(*scale) * originalSize.Height
+	img.SetMinSize(fyne.NewSize(newWidth, newHeight))
+	img.Refresh()
+}

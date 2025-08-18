@@ -33,7 +33,7 @@ func main() {
 	w.SetMainMenu(ui.MakeMenu(a, w))
 	w.SetMaster()
 
-	w.SetContent(ui.MainContent())
+	w.SetContent(ui.MainContent(w))
 
 	w.Resize(fyne.NewSize(1600, 900))
 
@@ -137,6 +137,6 @@ func InitDB() {
 	if err != nil {
 		logger.Error(err)
 	}
-	
+
 	logger.Debug(data1)
 }

@@ -1,6 +1,7 @@
 package img
 
 import (
+	"MyPicViu/common/logger"
 	"image"
 	"image/color"
 	"image/draw"
@@ -315,4 +316,43 @@ func GetClusters(img image.Image) []ColorCluster {
 	//}
 
 	return clusters
+}
+
+// CreateColorBarImage 生成颜色分布条图片
+func CreateColorBarImage(colors []ColorCluster, width, height int) image.Image {
+	// 创建一个RGBA图像
+	img := image.NewRGBA(image.Rect(0, 0, width, height))
+
+	// 计算每个颜色块的宽度并绘制
+	currentX := 0
+	for _, item := range colors {
+		logger.Debug("item.Percent = ", item.Percent/100)
+		// 根据比例计算当前颜色块的宽度
+		segmentWidth := int(item.Percent / 100 * float64(width))
+		if segmentWidth <= 0 {
+			continue // 跳过比例为0的颜色
+		}
+
+		// 定义当前颜色块的矩形区域
+		rect := image.Rect(
+			currentX,
+			0,
+			currentX+segmentWidth,
+			height,
+		)
+
+		// 填充颜色
+		draw.Draw(img, rect, &image.Uniform{item.Color}, image.Point{}, draw.Src)
+
+		// 更新X坐标，准备绘制下一个颜色块
+		currentX += segmentWidth
+	}
+
+	// 处理最后可能的像素偏差（确保填满整个宽度）
+	if currentX < width {
+		rect := image.Rect(currentX, 0, width, height)
+		draw.Draw(img, rect, &image.Uniform{colors[len(colors)-1].Color}, image.Point{}, draw.Src)
+	}
+
+	return img
 }

@@ -36,6 +36,10 @@ func NewTreeDataManager(rootNodes []*TreeNode) *TreeDataManager {
 	return manager
 }
 
+func (m *TreeDataManager) GetNodeMapLen() int {
+	return len(m.nodeMap)
+}
+
 // 构建节点映射表
 func (m *TreeDataManager) buildNodeMap(nodes []*TreeNode) {
 	for _, node := range nodes {
