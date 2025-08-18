@@ -1,16 +1,21 @@
 package main
 
 import (
+	"MyPicViu/common/define"
 	"MyPicViu/common/logger"
 	"MyPicViu/internal/ui"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/driver/desktop"
 	"fyne.io/fyne/v2/theme"
+	"os"
+	"path/filepath"
+	"runtime"
 )
 
 func init() {
 	logger.SetLogFile("./logs/", "MyPicViu", 7)
+	InitDB()
 }
 
 func main() {
@@ -80,5 +85,35 @@ func shortcutFocused(s fyne.Shortcut, cb fyne.Clipboard, f fyne.Focusable) {
 	}
 	if focused, ok := f.(fyne.Shortcutable); ok {
 		focused.TypedShortcut(s)
+	}
+}
+
+func resolveDBPath() string {
+	var rawPath string
+	switch runtime.GOOS {
+	case "windows":
+		rawPath = define.DBFilePathWindows
+	case "linux":
+		rawPath = define.DBFilePathLinux
+	case "darwin":
+		rawPath = define.DBFilePathMac
+	default:
+		panic("不支持的操作系统")
+	}
+
+	// 解析环境变量和~
+	if runtime.GOOS == "windows" {
+		return os.ExpandEnv(rawPath)
+	}
+	return filepath.Join(os.Getenv("HOME"), rawPath[2:]) // 替换~为用户目录
+}
+
+func InitDB() {
+	dbPath := resolveDBPath()
+	dir := filepath.Dir(dbPath)
+	logger.Debug("应用数据文件: ", dir)
+	if err := os.MkdirAll(dir, 0700); err != nil {
+		logger.Error(err)
+		os.Exit(1)
 	}
 }

@@ -2,6 +2,7 @@ package ui
 
 import (
 	"MyPicViu/common/logger"
+	"MyPicViu/common/utils"
 	"MyPicViu/internal/img"
 	"fmt"
 	"fyne.io/fyne/v2"
@@ -120,7 +121,7 @@ func setImgInfoText(info *img.ImgInfo) {
 	imgFileInfoDetail.RemoveAll()
 	imgFileInfoDetailStr := fmt.Sprintf(
 		"- 文件名: **%s**\n\n- 大小: **%s**\n\n- md5: **%s**\n\n- 路径: **%s**\n\n- 权限: **%s**\n\n- 最后修改时间: **%s**\n\n\n\n",
-		info.FileName, SizeFormat(info.FileSize), info.FileMd5, info.FilePath, info.FileMode, info.FileModTime)
+		info.FileName, utils.SizeFormat(info.FileSize), info.FileMd5, info.FilePath, info.FileMode, info.FileModTime)
 	imgFileInfoDetail.Add(widget.NewRichTextFromMarkdown(imgFileInfoDetailStr))
 	imgFileInfoDetail.Objects[0].Move(fyne.NewPos(20, 0))
 	imgFileInfoDetail.Refresh()
@@ -167,22 +168,4 @@ func setImgInfoText(info *img.ImgInfo) {
 	imgFingerprintInfoDetail.Objects[0].Move(fyne.NewPos(20, 0))
 	imgFingerprintInfoDetail.Refresh()
 
-}
-
-// SizeFormat 字节的单位转换 保留两位小数
-func SizeFormat(size int64) string {
-	if size < 1024 {
-		//return strconv.FormatInt(fileSize, 10) + "B"
-		return fmt.Sprintf("%.2fB", float64(size)/float64(1))
-	} else if size < (1024 * 1024) {
-		return fmt.Sprintf("%.2fKB", float64(size)/float64(1024))
-	} else if size < (1024 * 1024 * 1024) {
-		return fmt.Sprintf("%.2fMB", float64(size)/float64(1024*1024))
-	} else if size < (1024 * 1024 * 1024 * 1024) {
-		return fmt.Sprintf("%.2fGB", float64(size)/float64(1024*1024*1024))
-	} else if size < (1024 * 1024 * 1024 * 1024 * 1024) {
-		return fmt.Sprintf("%.2fTB", float64(size)/float64(1024*1024*1024*1024))
-	} else { //if fileSize < (1024 * 1024 * 1024 * 1024 * 1024 * 1024)
-		return fmt.Sprintf("%.2fEB", float64(size)/float64(1024*1024*1024*1024*1024))
-	}
 }

@@ -2,6 +2,7 @@ package img
 
 import (
 	"MyPicViu/common/logger"
+	"MyPicViu/common/utils"
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
@@ -10,10 +11,9 @@ import (
 	_ "image/png"
 	"io"
 	"os"
-	"time"
 )
 
-// 获取图片信息
+// ImgInfo 获取图片信息
 type ImgInfo struct {
 	FileName       string         // 图片文件名
 	FileSize       int64          // 图片文件大小
@@ -66,7 +66,7 @@ func (info *ImgInfo) GetFileInfo() {
 	info.FileName = fileInfo.Name()
 	info.FileSize = fileInfo.Size()
 	info.FileMode = fileInfo.Mode().String()
-	info.FileModTime = fileInfo.ModTime().Format(time.RFC3339) // 最后修改时间
+	info.FileModTime = fileInfo.ModTime().Format(utils.TimeTemplateChinese)
 	info.FileSys = fmt.Sprintf("%+v", fileInfo.Sys())
 
 }
@@ -93,8 +93,10 @@ func (info *ImgInfo) GetImgInfo() {
 	hash := md5.New()
 
 	// 以流的方式读取文件并更新哈希（适合大文件）
-	hashFile, err := CopyFileHandle(file)
-	defer hashFile.Close()
+	hashFile, err := utils.CopyFileHandle(file)
+	defer func() {
+		_ = hashFile.Close()
+	}()
 	if err != nil {
 		logger.Error("copy文件失败")
 		return
@@ -109,19 +111,24 @@ func (info *ImgInfo) GetImgInfo() {
 
 	logger.Debug("图片宽高格式 : ", info.Width, "|", info.Height, "|", info.Format)
 
-	exifFile, err := CopyFileHandle(file)
-	defer exifFile.Close()
+	exifFile, err := utils.CopyFileHandle(file)
+	defer func() {
+		_ = exifFile.Close()
+	}()
 	if err != nil {
 		logger.Error("copy文件失败")
 		return
 	}
 	info.GetExif(exifFile)
 
-	imgFile, err := CopyFileHandle(file)
+	imgFile, err := utils.CopyFileHandle(file)
 	if err != nil {
 		logger.Error("copy文件失败")
 		return
 	}
+	defer func() {
+		_ = imgFile.Close()
+	}()
 	imgData, _, err := image.Decode(imgFile)
 	if err != nil {
 		logger.Error("读取图片文件失败", err)
@@ -183,28 +190,4 @@ func (info *ImgInfo) GetImgInfo() {
 	logger.Debug("指纹1 ", info.DifferenceHash)
 	logger.Debug("指纹2 ", info.PHash)
 	logger.Debug("指纹3 ", info.AverageHash)
-}
-
-// CopyFileHandle 创建一个新的*os.File句柄，指向与源文件相同的路径
-func CopyFileHandle(src *os.File) (*os.File, error) {
-	// 获取源文件的路径
-	path := src.Name()
-
-	// 获取源文件的打开模式（只读、读写等）
-	// 注意：需要根据实际需求调整模式，这里假设源文件是可读的
-	mode := os.O_RDONLY
-	if src.Fd() >= 0 {
-		// 简单判断是否可写（实际场景可能需要更复杂的权限检查）
-		if _, err := src.WriteString(""); err == nil {
-			mode = os.O_RDWR // 源文件可写，则新句柄也以读写模式打开
-		}
-	}
-
-	// 再次打开文件，创建新的句柄
-	newFile, err := os.OpenFile(path, mode, 0644)
-	if err != nil {
-		return nil, fmt.Errorf("无法创建新文件句柄: %w", err)
-	}
-
-	return newFile, nil
 }
