@@ -1,15 +1,20 @@
 package main
 
 import (
+	"MyPicViu/common/logger"
 	"MyPicViu/internal/ui"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/driver/desktop"
 	"fyne.io/fyne/v2/theme"
-	"log"
 )
 
+func init() {
+	logger.SetLogFile("./logs/", "MyPicViu", 7)
+}
+
 func main() {
+
 	a := app.NewWithID("MyPicViu.2025.0814")
 
 	makeTray(a)
@@ -37,16 +42,16 @@ func main() {
 
 func logLifecycle(a fyne.App) {
 	a.Lifecycle().SetOnStarted(func() {
-		log.Println("Lifecycle: Started")
+		logger.Debug("Lifecycle: Started")
 	})
 	a.Lifecycle().SetOnStopped(func() {
-		log.Println("Lifecycle: Stopped")
+		logger.Debug("Lifecycle: Stopped")
 	})
 	a.Lifecycle().SetOnEnteredForeground(func() {
-		log.Println("Lifecycle: Entered Foreground")
+		logger.Debug("Lifecycle: Entered Foreground")
 	})
 	a.Lifecycle().SetOnExitedForeground(func() {
-		log.Println("Lifecycle: Exited Foreground")
+		logger.Debug("Lifecycle: Exited Foreground")
 	})
 }
 
@@ -56,7 +61,7 @@ func makeTray(a fyne.App) {
 		h.Icon = theme.HomeIcon()
 		menu := fyne.NewMenu("Hello World", h)
 		h.Action = func() {
-			log.Println("System tray menu tapped")
+			logger.Debug("System tray menu tapped")
 			h.Label = "Welcome"
 			menu.Refresh()
 		}

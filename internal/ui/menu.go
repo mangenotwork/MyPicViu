@@ -1,6 +1,7 @@
 package ui
 
 import (
+	"MyPicViu/common/logger"
 	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -12,7 +13,6 @@ import (
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 	"io"
-	"log"
 	"net/url"
 )
 
@@ -20,12 +20,12 @@ import (
 func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
 	newItem := fyne.NewMenuItem("打开", nil)
 	fileItem := fyne.NewMenuItem("打开图片", func() {
-		fmt.Println("Menu New->File")
+		logger.Debug("Menu New->File")
 		openImgFile(w)
 	})
 	fileItem.Icon = theme.FileIcon()
 	dirItem := fyne.NewMenuItem("打开目录", func() {
-		fmt.Println("Menu New->Directory")
+		logger.Debug("Menu New->Directory")
 		openFile(w)
 	})
 	dirItem.Icon = theme.FolderIcon()
@@ -92,7 +92,7 @@ func openFile(win fyne.Window) {
 			return
 		}
 		if list == nil {
-			log.Println("Cancelled")
+			logger.Debug("Cancelled")
 			return
 		}
 
@@ -101,7 +101,7 @@ func openFile(win fyne.Window) {
 			dialog.ShowError(err, win)
 			return
 		}
-		log.Println(list.String())
+		logger.Debug(list.String())
 		out := fmt.Sprintf("打开目录 %s (含%d目录或文件):\n%s", list.Name(), len(children), list.String())
 		// 改为确认对话框
 		dialog.ShowConfirm(
@@ -110,14 +110,14 @@ func openFile(win fyne.Window) {
 			func(confirmed bool) { // 用户选择后的回调函数
 				if confirmed {
 					// 用户点击了"确定"按钮，执行相应操作
-					fmt.Println("用户确认了操作")
+					logger.Debug("用户确认了操作")
 					// 可以在这里添加确认后的逻辑，比如实际打开目录
 
 					// 遍历目录
 					dataManager.AddRootDirNode(list.Path())
 				} else {
 					// 用户点击了"取消"按钮
-					fmt.Println("用户取消了操作")
+					logger.Debug("用户取消了操作")
 				}
 			},
 			win, // 父窗口
@@ -134,17 +134,17 @@ func openImgFile(win fyne.Window) {
 			return
 		}
 		if reader == nil {
-			log.Println("Cancelled")
+			logger.Debug("Cancelled")
 			return
 		}
 
 		if reader == nil {
-			log.Println("Cancelled")
+			logger.Debug("Cancelled")
 			return
 		}
 		defer reader.Close()
 
-		log.Println(reader.URI().Name())
+		logger.Debug(reader.URI().Name())
 		dataManager.AddRootFileNode(reader.URI().Name(), reader.URI().Path())
 
 	}, win)

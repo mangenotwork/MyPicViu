@@ -1,7 +1,6 @@
 package img
 
 import (
-	"fmt"
 	"image"
 	"image/color"
 	"image/draw"
@@ -309,11 +308,11 @@ func GetClusters(img image.Image) []ColorCluster {
 	// 提取主要颜色
 	clusters := extractColors(rgba, 10)
 
-	// 打印结果
-	fmt.Println("提取的主要颜色:")
-	for i, c := range clusters {
-		fmt.Printf("%d. RGB(%d, %d, %d) - 占比: %.2f%%\n", i+1, c.Color.R, c.Color.G, c.Color.B, c.Percent)
-	}
+	//// 打印结果
+	//fmt.Println("提取的主要颜色:")
+	//for i, c := range clusters {
+	//	fmt.Printf("%d. RGB(%d, %d, %d) - 占比: %.2f%%\n", i+1, c.Color.R, c.Color.G, c.Color.B, c.Percent)
+	//}
 
 	return clusters
 }

@@ -1,9 +1,9 @@
 package ui
 
 import (
+	"MyPicViu/common/logger"
 	"MyPicViu/internal/db"
 	"MyPicViu/internal/img"
-	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
@@ -12,7 +12,6 @@ import (
 	"golang.org/x/image/draw"
 	"image"
 	"image/color"
-	"log"
 	"os"
 )
 
@@ -24,7 +23,7 @@ func LeftContainer() *fyne.Container {
 	tree.OnSelected = func(id widget.TreeNodeID) {
 		node := dataManager.FindNode(id)
 		if node == nil {
-			fmt.Printf("节点被点击: ID=%s (未知节点)\n", id)
+			logger.ErrorF("节点被点击: ID=%s (未知节点)\n", id)
 			return
 		}
 
@@ -32,13 +31,14 @@ func LeftContainer() *fyne.Container {
 		if !node.IsFile {
 			nodeType = "文件夹"
 		}
-		fmt.Printf("节点被点击: ID=%s, 名称=%s, 类型=%s 文件路径=%s\n",
+
+		logger.DebugF("节点被点击: ID=%s, 名称=%s, 类型=%s 文件路径=%s\n",
 			node.ID, node.Name, nodeType, node.FilePath)
 
 		// 解码图片
 		reader, err := os.Open(node.FilePath)
 		if err != nil {
-			log.Println("打开图片文件失败", err)
+			logger.Error("打开图片文件失败", err)
 			return
 		}
 
@@ -48,7 +48,7 @@ func LeftContainer() *fyne.Container {
 
 		imgData, _, err := image.Decode(reader)
 		if err != nil {
-			log.Println("读取图片文件失败", err)
+			logger.Error("读取图片文件失败", err)
 			return
 		}
 
@@ -147,7 +147,7 @@ func createColorBarImage(colors []img.ColorCluster, width, height int) image.Ima
 	// 计算每个颜色块的宽度并绘制
 	currentX := 0
 	for _, item := range colors {
-		log.Println("item.Percent = ", item.Percent/100)
+		logger.Debug("item.Percent = ", item.Percent/100)
 		// 根据比例计算当前颜色块的宽度
 		segmentWidth := int(item.Percent / 100 * float64(width))
 		if segmentWidth <= 0 {

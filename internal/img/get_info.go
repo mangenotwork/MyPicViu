@@ -1,6 +1,7 @@
 package img
 
 import (
+	"MyPicViu/common/logger"
 	"crypto/md5"
 	"encoding/hex"
 	"fmt"
@@ -8,7 +9,6 @@ import (
 	_ "image/jpeg"
 	_ "image/png"
 	"io"
-	"log"
 	"os"
 	"time"
 )
@@ -54,11 +54,11 @@ func (info *ImgInfo) GetFileInfo() {
 	if err != nil {
 		// 处理错误（如文件不存在）
 		if os.IsNotExist(err) {
-			log.Printf("文件不存在: %s\n", info.FilePath)
+			logger.ErrorF("文件不存在: %s\n", info.FilePath)
 		} else if os.IsPermission(err) {
-			log.Printf("没有权限访问文件: %s\n", info.FilePath)
+			logger.ErrorF("没有权限访问文件: %s\n", info.FilePath)
 		} else {
-			log.Printf("获取文件信息失败: %v\n", err)
+			logger.ErrorF("获取文件信息失败: %v\n", err)
 		}
 		return
 	}
@@ -75,14 +75,14 @@ func (info *ImgInfo) GetImgInfo() {
 	// 打开文件
 	file, err := os.Open(info.FilePath)
 	if err != nil {
-		log.Println("无法打开文件:", err)
+		logger.Error("无法打开文件:", err)
 		return
 	}
 	defer file.Close()
 
 	imgConfig, format, err := image.DecodeConfig(file)
 	if err != nil {
-		log.Printf("无法解析图片: %w", err)
+		logger.ErrorF("无法解析图片: %w", err)
 		return
 	}
 	info.Width = imgConfig.Width
@@ -96,93 +96,93 @@ func (info *ImgInfo) GetImgInfo() {
 	hashFile, err := CopyFileHandle(file)
 	defer hashFile.Close()
 	if err != nil {
-		log.Println("copy文件失败")
+		logger.Error("copy文件失败")
 		return
 	}
 	if _, err := io.Copy(hash, hashFile); err != nil {
-		log.Println("读取文件失败:", err)
+		logger.Error("读取文件失败:", err)
 	}
 
 	// 计算最终哈希值并转换为十六进制字符串
 	md5Sum := hex.EncodeToString(hash.Sum(nil))
 	info.FileMd5 = md5Sum
 
-	log.Println("图片宽高格式 : ", info.Width, "|", info.Height, "|", info.Format)
+	logger.Debug("图片宽高格式 : ", info.Width, "|", info.Height, "|", info.Format)
 
 	exifFile, err := CopyFileHandle(file)
 	defer exifFile.Close()
 	if err != nil {
-		log.Println("copy文件失败")
+		logger.Error("copy文件失败")
 		return
 	}
 	info.GetExif(exifFile)
 
 	imgFile, err := CopyFileHandle(file)
 	if err != nil {
-		log.Println("copy文件失败")
+		logger.Error("copy文件失败")
 		return
 	}
 	imgData, _, err := image.Decode(imgFile)
 	if err != nil {
-		log.Println("读取图片文件失败", err)
+		logger.Error("读取图片文件失败", err)
 		return
 	}
 
 	info.Saturation, err = calculateImageSaturation(imgData)
 	if err != nil {
-		log.Println("获取饱和度失败：", err)
+		logger.Error("获取饱和度失败：", err)
 	}
-	log.Println("饱和度 ： ", info.Saturation)
+	logger.Debug("饱和度 ： ", info.Saturation)
 
 	info.Brightness, err = calculateImageBrightness(imgData)
 	if err != nil {
-		log.Println("获取亮度失败：", err)
+		logger.Error("获取亮度失败：", err)
 	}
-	log.Println("亮度 ： ", info.Saturation)
+	logger.Debug("亮度 ： ", info.Saturation)
 
 	info.Contrast, err = calculateImageContrast(imgData)
 	if err != nil {
-		log.Println("获取对比度失败：", err)
+		logger.Error("获取对比度失败：", err)
 	}
-	log.Println("对比度 ： ", info.Saturation)
+	logger.Debug("对比度 ： ", info.Saturation)
 
 	info.Sharpness, err = calculateImageSharpness(imgData)
 	if err != nil {
-		log.Println("获取锐度失败：", err)
+		logger.Error("获取锐度失败：", err)
 	}
-	log.Println("锐度 ： ", info.Saturation)
+	logger.Debug("锐度 ： ", info.Saturation)
 
 	info.Exposure, err = calculateImageExposure(imgData)
 	if err != nil {
-		log.Println("获取曝光度失败：", err)
+		logger.Error("获取曝光度失败：", err)
 	}
-	log.Println("曝光度 ： ", info.Exposure.ExposureRating)
+	logger.Debug("曝光度 ： ", info.Exposure.ExposureRating)
 
 	info.Temperature, err = calculateImageColorTemperature(imgData)
 	if err != nil {
-		log.Println("获取色温失败：", err)
+		logger.Error("获取色温失败：", err)
 	}
-	log.Println("色温 ： ", info.Temperature)
+	logger.Debug("色温 ： ", info.Temperature)
 
 	info.Hue, _, err = calculateImageHue(imgData)
 	if err != nil {
-		log.Println("获取色调失败：", err)
+		logger.Error("获取色调失败：", err)
 	}
-	log.Println("色调 ： ", info.Temperature)
+	logger.Debug("色调 ： ", info.Temperature)
 
 	info.Noise, err = calculateImageNoise(imgData)
 	if err != nil {
-		log.Println("获取噪点值失败：", err)
+		logger.Error("获取噪点值失败：", err)
 	}
-	log.Println("噪点值 ： ", info.Temperature)
+	logger.Debug("噪点值 ： ", info.Temperature)
 
 	info.DifferenceHash = differenceHash(imgData)
 	info.PHash = pHash(imgData)
 	info.AverageHash = averageHash(imgData)
 
-	log.Println("指纹1 ", info.DifferenceHash)
-	log.Println("指纹2 ", info.PHash)
-	log.Println("指纹3 ", info.AverageHash)
+	logger.Debug("指纹1 ", info.DifferenceHash)
+	logger.Debug("指纹2 ", info.PHash)
+	logger.Debug("指纹3 ", info.AverageHash)
 }
 
 // CopyFileHandle 创建一个新的*os.File句柄，指向与源文件相同的路径

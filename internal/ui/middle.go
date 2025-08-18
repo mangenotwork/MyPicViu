@@ -1,6 +1,7 @@
 package ui
 
 import (
+	"MyPicViu/common/logger"
 	"MyPicViu/internal/img"
 	"fmt"
 	"fyne.io/fyne/v2"
@@ -12,7 +13,6 @@ import (
 	"image/color"
 	_ "image/jpeg"
 	_ "image/png"
-	"log"
 )
 
 // 图片视图区 1 图片显示 上
@@ -114,7 +114,7 @@ var imgFingerprintInfoDetail = container.NewWithoutLayout()
 
 func setImgInfoText(info *img.ImgInfo) {
 
-	log.Printf("图片信息: %+v", info)
+	logger.Debug("图片信息: %+v", info)
 
 	// 文件信息
 	imgFileInfoDetail.RemoveAll()

@@ -1,7 +1,7 @@
 package img
 
 import (
-	"fmt"
+	"MyPicViu/common/logger"
 	"github.com/rwcarlsen/goexif/exif"
 	"io"
 	"math/big"
@@ -14,29 +14,29 @@ func (info *ImgInfo) GetExif(f io.Reader) {
 	// 解析EXIF数据
 	x, err := exif.Decode(f)
 	if err != nil {
-		fmt.Println("解析EXIF失败: %w", err)
+		logger.ErrorF("解析EXIF失败: %w", err)
 		return
 	}
 
 	// 打印基本信息
-	fmt.Println("===== 基本EXIF信息 =====")
+	logger.Debug("===== 基本EXIF信息 =====")
 
 	// 1. 拍摄时间
 	if tag, err := x.Get(exif.DateTimeOriginal); err == nil {
 		if val, err := tag.StringVal(); err == nil {
-			fmt.Println("拍摄时间: %s\n", parseExifTime(val))
+			logger.DebugF("拍摄时间: %s\n", parseExifTime(val))
 		}
 	}
 
 	// 2. 设备信息
 	if tag, err := x.Get(exif.Model); err == nil {
 		if val, err := tag.StringVal(); err == nil {
-			fmt.Println("设备型号: %s\n", val)
+			logger.DebugF("设备型号: %s\n", val)
 		}
 	}
 	if tag, err := x.Get(exif.Make); err == nil {
 		if val, err := tag.StringVal(); err == nil {
-			fmt.Println("设备厂商: %s\n", val)
+			logger.DebugF("设备厂商: %s\n", val)
 		}
 	}
 
@@ -51,7 +51,7 @@ func (info *ImgInfo) GetExif(f io.Reader) {
 				new(big.Float).SetInt(rat.Denom()),
 			)
 			fVal, _ := fNumber.Float64()
-			fmt.Println("光圈值: f/%.1f\n", fVal)
+			logger.DebugF("光圈值: f/%.1f\n", fVal)
 		}
 	}
 
@@ -59,7 +59,7 @@ func (info *ImgInfo) GetExif(f io.Reader) {
 	if tag, err := x.Get(exif.ExposureTime); err == nil {
 		rat, err := tag.Rat(0)
 		if err == nil {
-			fmt.Println("曝光时间: %d/%ds\n", rat.Num(), rat.Denom())
+			logger.DebugF("曝光时间: %d/%ds\n", rat.Num(), rat.Denom())
 		}
 	}
 
@@ -72,7 +72,7 @@ func (info *ImgInfo) GetExif(f io.Reader) {
 				new(big.Float).SetInt(rat.Denom()),
 			)
 			fVal, _ := focal.Float64()
-			fmt.Println("焦距: %.1fmm\n", fVal)
+			logger.DebugF("焦距: %.1fmm\n", fVal)
 		}
 	}
 
@@ -85,7 +85,7 @@ func (info *ImgInfo) GetExif(f io.Reader) {
 				new(big.Float).SetInt(rat.Denom()),
 			)
 			dpiVal, _ := dpi.Float64()
-			fmt.Println("水平DPI: %.1f\n", dpiVal)
+			logger.DebugF("水平DPI: %.1f\n", dpiVal)
 		}
 	}
 

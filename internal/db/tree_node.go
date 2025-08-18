@@ -1,10 +1,10 @@
 package db
 
 import (
+	"MyPicViu/common/logger"
 	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/widget"
-	"log"
 	"os"
 	"path/filepath"
 )
@@ -130,7 +130,7 @@ func (m *TreeDataManager) AddRootFileNode(name, filePath string) bool {
 	// 添加到根节点
 	m.rootNodes = append(m.rootNodes, newNode)
 
-	log.Println("%v", newNode)
+	logger.Debug("%v", newNode)
 
 	// 更新节点映射
 	m.nodeMap[newNode.ID] = newNode
@@ -156,13 +156,13 @@ func (m *TreeDataManager) AddRootDirNode(dir string) bool {
 		Parent:   nil, // 根节点没有父节点
 	}
 
-	log.Println("准备遍历目录 : ", dir)
+	logger.Debug("准备遍历目录 : ", dir)
 	err := traverseDir(dir, newNode, m.nodeMap)
 	if err != nil {
-		log.Println(err)
+		logger.Error(err)
 	}
 
-	//log.Println("%v", newNode)
+	//logger.Debug("%v", newNode)
 
 	// 添加到根节点列表
 	m.rootNodes = append(m.rootNodes, newNode)
@@ -191,7 +191,7 @@ func traverseDir(path string, parentNode *TreeNode, nodeMap map[string]*TreeNode
 		//nodeID := fmt.Sprintf("%s_%s", parentNode.ID, entry.Name())
 
 		if entry.IsDir() {
-			fmt.Printf("[目录] %s\n", fullPath)
+			// logger.DebugF("[目录] %s\n", fullPath)
 
 			dirNode := &TreeNode{
 				ID:       fullPath,
@@ -345,7 +345,7 @@ func CreateCustomTree(treeData []*TreeNode) (*widget.Tree, *TreeDataManager) {
 			if !node.IsFile {
 				nodeType = "文件夹"
 			}
-			fmt.Printf("选中: %s (%s)\n", node.Name, nodeType)
+			logger.DebugF("选中: %s (%s)\n", node.Name, nodeType)
 		}
 	}
 
