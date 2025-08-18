@@ -659,3 +659,5 @@
 2025-08-18 15:33:37.395 [DEBUG] internal/ui/left.go:150 	| item.Percent = 0.05036539155539517
 2025-08-18 15:33:37.395 [DEBUG] internal/ui/left.go:150 	| item.Percent = 0.03741880187657885
 2025-08-18 15:34:05.459 [DEBUG] mangenotwork/MyPicViu/main.go:54 	| Lifecycle: Exited Foreground
+2025-08-18 15:34:42.534 [DEBUG] mangenotwork/MyPicViu/main.go:51 	| Lifecycle: Entered Foreground
+2025-08-18 15:34:42.634 [DEBUG] mangenotwork/MyPicViu/main.go:54 	| Lifecycle: Exited Foreground
