@@ -4,6 +4,7 @@ go 1.22.2
 
 require (
 	fyne.io/fyne/v2 v2.6.2
+	github.com/boltdb/bolt v1.3.1
 	github.com/rwcarlsen/goexif v0.0.0-20190401172101-9e8deecbddbd
 	golang.org/x/image v0.24.0
 )

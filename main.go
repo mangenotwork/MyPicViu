@@ -3,6 +3,7 @@ package main
 import (
 	"MyPicViu/common/define"
 	"MyPicViu/common/logger"
+	"MyPicViu/internal/db"
 	"MyPicViu/internal/ui"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -16,6 +17,7 @@ import (
 func init() {
 	logger.SetLogFile("./logs/", "MyPicViu", 7)
 	InitDB()
+	ui.InitUI()
 }
 
 func main() {
@@ -89,26 +91,27 @@ func shortcutFocused(s fyne.Shortcut, cb fyne.Clipboard, f fyne.Focusable) {
 }
 
 func resolveDBPath() string {
-	var rawPath string
 	switch runtime.GOOS {
 	case "windows":
-		rawPath = define.DBFilePathWindows
+		appDataPath := os.Getenv("APPDATA")
+		if appDataPath == "" {
+			userProfile := os.Getenv("USERPROFILE")
+			appDataPath = filepath.Join(userProfile, "AppData", "Roaming")
+		}
+		return filepath.Join(appDataPath, define.DBFileDirName, define.DBFileFileName)
 	case "linux":
-		rawPath = define.DBFilePathLinux
+		home := os.Getenv("HOME")
+		return filepath.Join(home, ".local", "share", define.DBFileDirName, define.DBFileFileName)
 	case "darwin":
-		rawPath = define.DBFilePathMac
+		home := os.Getenv("HOME")
+		return filepath.Join(home, "Library", "Application Support", define.DBFileDirName, define.DBFileFileName)
 	default:
 		panic("不支持的操作系统")
 	}
-
-	// 解析环境变量和~
-	if runtime.GOOS == "windows" {
-		return os.ExpandEnv(rawPath)
-	}
-	return filepath.Join(os.Getenv("HOME"), rawPath[2:]) // 替换~为用户目录
 }
 
 func InitDB() {
+	logger.Debug("初始化DB")
 	dbPath := resolveDBPath()
 	dir := filepath.Dir(dbPath)
 	logger.Debug("应用数据文件: ", dir)
@@ -116,4 +119,24 @@ func InitDB() {
 		logger.Error(err)
 		os.Exit(1)
 	}
+
+	db.InitDB(dbPath)
+	stats, err := db.DB.Stats(db.TreeNodeTable)
+	if err != nil {
+		logger.Error(err)
+	}
+	logger.Debug(stats)
+
+	err = db.DB.Set(db.TreeNodeTable, "data1", "111111111")
+	if err != nil {
+		logger.Error(err)
+	}
+
+	var data1 string = ""
+	err = db.DB.Get(db.TreeNodeTable, "data1", &data1)
+	if err != nil {
+		logger.Error(err)
+	}
+	
+	logger.Debug(data1)
 }

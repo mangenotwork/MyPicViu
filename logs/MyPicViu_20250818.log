@@ -1106,3 +1106,1145 @@
 2025-08-18 16:05:45.051 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 应用数据文件: %APPDATA%\MyPicViu
 2025-08-18 16:05:45.684 [DEBUG] mangenotwork/MyPicViu/main.go:56 	| Lifecycle: Entered Foreground
 2025-08-18 16:05:45.696 [DEBUG] mangenotwork/MyPicViu/main.go:50 	| Lifecycle: Started
+2025-08-18 16:06:42.182 [DEBUG] mangenotwork/MyPicViu/main.go:59 	| Lifecycle: Exited Foreground
+2025-08-18 16:20:13.773 [DEBUG] mangenotwork/MyPicViu/main.go:53 	| Lifecycle: Stopped
+2025-08-18 16:20:20.850 [DEBUG] mangenotwork/MyPicViu/main.go:115 	| 应用数据文件: %APPDATA%\MyPicViu
+2025-08-18 16:20:21.038 [DEBUG] mangenotwork/MyPicViu/main.go:125 	| {0 0 0 0 0 1 0 0 0 0 1 1 16}
+2025-08-18 16:20:21.665 [DEBUG] mangenotwork/MyPicViu/main.go:57 	| Lifecycle: Entered Foreground
+2025-08-18 16:20:21.678 [DEBUG] mangenotwork/MyPicViu/main.go:51 	| Lifecycle: Started
+2025-08-18 16:20:33.853 [DEBUG] mangenotwork/MyPicViu/main.go:60 	| Lifecycle: Exited Foreground
+2025-08-18 16:22:29.797 [DEBUG] mangenotwork/MyPicViu/main.go:54 	| Lifecycle: Stopped
+2025-08-18 16:22:36.873 [DEBUG] mangenotwork/MyPicViu/main.go:115 	| 应用数据文件: %APPDATA%\MyPicViu
+2025-08-18 16:22:37.040 [DEBUG] mangenotwork/MyPicViu/main.go:125 	| {0 0 0 0 0 1 0 0 0 0 1 1 16}
+2025-08-18 16:22:37.745 [DEBUG] mangenotwork/MyPicViu/main.go:57 	| Lifecycle: Entered Foreground
+2025-08-18 16:22:37.758 [DEBUG] mangenotwork/MyPicViu/main.go:51 	| Lifecycle: Started
+2025-08-18 16:23:04.569 [DEBUG] mangenotwork/MyPicViu/main.go:60 	| Lifecycle: Exited Foreground
+2025-08-18 16:28:40.746 [DEBUG] mangenotwork/MyPicViu/main.go:54 	| Lifecycle: Stopped
+2025-08-18 16:28:47.311 [DEBUG] mangenotwork/MyPicViu/main.go:115 	| 应用数据文件: %APPDATA%\MyPicViu
+2025-08-18 16:28:47.753 [DEBUG] mangenotwork/MyPicViu/main.go:125 	| {0 0 0 0 0 1 0 0 0 0 1 1 16}
+2025-08-18 16:28:47.850 [DEBUG] mangenotwork/MyPicViu/main.go:138 	| 111111111
+2025-08-18 16:28:48.489 [DEBUG] mangenotwork/MyPicViu/main.go:57 	| Lifecycle: Entered Foreground
+2025-08-18 16:28:48.499 [DEBUG] mangenotwork/MyPicViu/main.go:51 	| Lifecycle: Started
+2025-08-18 16:32:17.942 [DEBUG] mangenotwork/MyPicViu/main.go:60 	| Lifecycle: Exited Foreground
+2025-08-18 16:37:24.092 [DEBUG] mangenotwork/MyPicViu/main.go:54 	| Lifecycle: Stopped
+2025-08-18 16:37:33.605 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:37:33.624 [DEBUG] mangenotwork/MyPicViu/main.go:124 	| {0 0 0 0 0 1 0 0 0 0 1 1 16}
+2025-08-18 16:37:33.644 [DEBUG] mangenotwork/MyPicViu/main.go:137 	| 111111111
+2025-08-18 16:37:34.269 [DEBUG] mangenotwork/MyPicViu/main.go:56 	| Lifecycle: Entered Foreground
+2025-08-18 16:37:34.283 [DEBUG] mangenotwork/MyPicViu/main.go:50 	| Lifecycle: Started
+2025-08-18 16:44:30.139 [DEBUG] mangenotwork/MyPicViu/main.go:59 	| Lifecycle: Exited Foreground
+2025-08-18 16:44:31.299 [DEBUG] mangenotwork/MyPicViu/main.go:53 	| Lifecycle: Stopped
+2025-08-18 16:53:44.084 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 16:53:44.084 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:53:44.095 [ERROR] internal/db/tree_node.go:100 	| 获取存储节点数据失败: ISNULL
+2025-08-18 16:53:44.105 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 1 1 0 0 0 0 1 1 48}
+2025-08-18 16:53:44.122 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 16:53:44.122 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 16:53:44.760 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:53:44.770 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 16:53:49.357 [DEBUG] internal/ui/menu.go:23 	| Menu New->File
+2025-08-18 16:53:51.345 [DEBUG] internal/ui/menu.go:147 	| girlNor-1.png
+2025-08-18 16:53:51.350 [DEBUG] internal/db/tree_node.go:146 	| %v&{girlNor-1.png girlNor-1.png C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png [] true <nil>}
+2025-08-18 16:53:53.651 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 16:53:53.652 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 16:53:53.652 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 16:53:53.655 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 16:53:53.656 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 16:53:53.657 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 16:53:53.660 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 16:53:53.661 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 16:53:53.662 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 16:53:53.664 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 16:53:53.668 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 16:53:53.692 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 16:53:53.692 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 16:53:53.693 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 16:53:53.693 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:2682155692 HighDateTime:31199261} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 16:53:53.707 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 16:53:53.707 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 16:53:53.708 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 16:53:58.271 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:53:58.297 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 16:54:06.005 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 16:54:06.006 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:54:06.021 [ERROR] internal/db/tree_node.go:100 	| 获取存储节点数据失败: json: cannot unmarshal object into Go value of type []*db.TreeNode
+2025-08-18 16:54:06.032 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 2 1 0 0 0 0 1 1 247}
+2025-08-18 16:54:06.057 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 16:54:06.057 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 16:54:06.685 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:54:06.696 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 16:54:31.032 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:54:36.751 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:54:37.161 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:54:46.746 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:54:47.296 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:55:56.002 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 16:56:02.729 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 16:56:02.729 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:56:02.742 [ERROR] internal/db/tree_node.go:100 	| 获取存储节点数据失败: json: cannot unmarshal object into Go value of type []*db.TreeNode
+2025-08-18 16:56:02.752 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 2 1 0 0 0 0 1 1 247}
+2025-08-18 16:56:02.770 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 16:56:02.770 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 16:56:03.399 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:56:03.410 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 16:56:06.500 [DEBUG] internal/ui/menu.go:23 	| Menu New->File
+2025-08-18 16:56:08.417 [DEBUG] internal/ui/menu.go:147 	| girlNor-1.png
+2025-08-18 16:56:08.421 [DEBUG] internal/db/tree_node.go:146 	| %v&{girlNor-1.png girlNor-1.png C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png [] true <nil>}
+2025-08-18 16:56:09.209 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 16:56:09.210 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 16:56:09.210 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 16:56:09.212 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 16:56:09.213 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 16:56:09.215 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 16:56:09.217 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 16:56:09.218 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 16:56:09.219 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 16:56:09.221 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 16:56:09.225 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 16:56:09.247 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 16:56:09.247 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 16:56:09.247 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 16:56:09.247 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:4037730085 HighDateTime:31199261} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 16:56:09.267 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 16:56:09.269 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 16:56:10.818 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:56:10.843 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 16:56:18.884 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 16:56:18.884 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:56:18.908 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 2 1 0 0 0 0 1 1 249}
+2025-08-18 16:56:18.928 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 16:56:18.928 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 16:56:19.549 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:56:19.561 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 16:56:20.894 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 16:56:20.896 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 16:56:20.896 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 16:56:20.898 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 16:56:20.900 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 16:56:20.902 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 16:56:20.908 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 16:56:20.909 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 16:56:20.910 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 16:56:20.913 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 16:56:20.915 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 16:56:20.938 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 16:56:20.938 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 16:56:20.939 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 16:56:20.939 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:4154582126 HighDateTime:31199261} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 16:56:20.956 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 16:56:20.957 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 16:56:37.615 [DEBUG] internal/ui/menu.go:28 	| Menu New->Directory
+2025-08-18 16:56:39.155 [DEBUG] internal/ui/menu.go:104 	| file://C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 16:56:40.102 [DEBUG] internal/ui/menu.go:113 	| 用户确认了操作
+2025-08-18 16:56:40.102 [DEBUG] internal/db/tree_node.go:172 	| 准备遍历目录 : C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 16:56:40.106 [ERROR] internal/db/tree_node.go:185 	| 存储节点数据失败json: unsupported value: encountered a cycle via *db.TreeNode
+2025-08-18 16:56:42.923 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png, 名称=girlNor-10.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png
+
+2025-08-18 16:56:42.924 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 16:56:42.924 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 16:56:42.927 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08879002054773938
+2025-08-18 16:56:42.928 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08879002054773938
+2025-08-18 16:56:42.929 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08879002054773938
+2025-08-18 16:56:42.931 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08879002054773938
+2025-08-18 16:56:42.932 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 16:56:42.933 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5891.556576240394
+2025-08-18 16:56:42.936 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5891.556576240394
+2025-08-18 16:56:42.939 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5891.556576240394
+2025-08-18 16:56:42.962 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000001000001110000010011000110110000110000
+2025-08-18 16:56:42.962 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100110000101100001100111111001000101100001100011001000010011110
+2025-08-18 16:56:42.962 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000110000000100000011100001111000011110000111000
+2025-08-18 16:56:42.962 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-10.png 29797 8bfee6564277c1e6360bcf88141da5e3 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png -rw-rw-rw- 2024年10月28日 17时50分58秒 &{FileAttributes:128 CreationTime:{LowDateTime:3816680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:79908803 HighDateTime:31199262} LastWriteTime:{LowDateTime:3816680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29797} 360 360 png 0 0  0        0.08879002054773938 0.12764743503389353 1.754435725630007 0.12918605576034306 {0.0013040123456790123 0.6895447530864197 0.12764743503389353 欠曝} 5891.556576240394 191.42646017551047 0.006663844466128273 0001000000101000001100000001000001110000010011000110110000110000 1100110000101100001100111111001000101100001100011001000010011110 0000000000011000000110000000100000011100001111000011110000111000}
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1794792090098276
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1787857774802133
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.17484039119102843
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16596924989837641
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16039788622940632
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06317400349106908
+2025-08-18 16:56:42.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.037851796944118984
+2025-08-18 16:56:42.972 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01872265129958633
+2025-08-18 16:56:42.972 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.011047081609717607
+2025-08-18 16:56:42.972 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009731952846655987
+2025-08-18 16:56:43.418 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png, 名称=girlNor-4.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png
+
+2025-08-18 16:56:43.420 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 16:56:43.420 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 16:56:43.422 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.11589488768511703
+2025-08-18 16:56:43.423 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.11589488768511703
+2025-08-18 16:56:43.424 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.11589488768511703
+2025-08-18 16:56:43.428 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.11589488768511703
+2025-08-18 16:56:43.429 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 16:56:43.430 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6477.975184176133
+2025-08-18 16:56:43.434 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6477.975184176133
+2025-08-18 16:56:43.436 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6477.975184176133
+2025-08-18 16:56:43.460 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000000100000001100010111100011011000010100000101000
+2025-08-18 16:56:43.460 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001100100111001011011001110001000100110001001100110000111001100
+2025-08-18 16:56:43.461 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000010000000100000011100001011000011110000011100
+2025-08-18 16:56:43.461 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-4.png 29964 429f23aaea9791fc160caaf02584bef2 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png -rw-rw-rw- 2024年10月28日 17时50分48秒 &{FileAttributes:128 CreationTime:{LowDateTime:3716680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:84856243 HighDateTime:31199262} LastWriteTime:{LowDateTime:3716680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29964} 360 360 png 0 0  0        0.11589488768511703 0.10624324289517682 1.8001915292600323 0.10737036957863277 {0.0019367283950617283 0.7105941358024691 0.10624324289517682 欠曝} 6477.975184176133 111.48925070397802 0.005511028461695249 0001000000101000000100000001100010111100011011000010100000101000 1001100100111001011011001110001000100110001001100110000111001100 0000000000011000000010000000100000011100001011000011110000011100}
+2025-08-18 16:56:43.468 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.23063177734805276
+2025-08-18 16:56:43.468 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.15832374611411645
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.09551318140650626
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08251535994908575
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07928426308961398
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07906396103101364
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07074143881722272
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07049665875211122
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06983575257631018
+2025-08-18 16:56:43.469 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.063593860915967
+2025-08-18 16:56:45.970 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:56:45.990 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 16:56:53.456 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 16:56:53.457 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:56:53.480 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 2 1 0 0 0 0 1 1 249}
+2025-08-18 16:56:53.499 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 16:56:53.499 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 16:56:54.118 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:56:54.129 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 16:56:55.788 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 16:56:55.790 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 16:56:55.790 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 16:56:55.792 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 16:56:55.794 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 16:56:55.797 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 16:56:55.801 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 16:56:55.802 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 16:56:55.803 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 16:56:55.806 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 16:56:55.808 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 16:56:55.832 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 16:56:55.832 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 16:56:55.833 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 16:56:55.833 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:208556173 HighDateTime:31199262} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 16:56:55.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 16:57:16.074 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:59:20.240 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 16:59:35.534 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 16:59:35.534 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 16:59:35.549 [ERROR] internal/db/tree_node.go:100 	| 获取存储节点数据失败: ISNULL
+2025-08-18 16:59:35.560 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 0 1 0 0 0 0 1 1 16}
+2025-08-18 16:59:35.580 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 16:59:35.580 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 16:59:36.210 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:59:36.220 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 16:59:41.986 [DEBUG] internal/ui/menu.go:28 	| Menu New->Directory
+2025-08-18 16:59:42.994 [DEBUG] internal/ui/menu.go:104 	| file://C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 16:59:43.789 [DEBUG] internal/ui/menu.go:113 	| 用户确认了操作
+2025-08-18 16:59:43.789 [DEBUG] internal/db/tree_node.go:172 	| 准备遍历目录 : C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 16:59:43.791 [ERROR] internal/db/tree_node.go:185 	| 存储节点数据失败json: unsupported value: encountered a cycle via *db.TreeNode
+2025-08-18 16:59:47.403 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:59:50.859 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 16:59:52.178 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 16:59:52.203 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 17:01:08.843 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 17:01:08.844 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 17:01:08.859 [ERROR] internal/db/tree_node.go:100 	| 获取存储节点数据失败: ISNULL
+2025-08-18 17:01:08.869 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 0 1 0 0 0 0 1 1 16}
+2025-08-18 17:01:08.890 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 17:01:08.890 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 17:01:09.511 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 17:01:09.521 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 17:01:14.085 [DEBUG] internal/ui/menu.go:28 	| Menu New->Directory
+2025-08-18 17:01:15.135 [DEBUG] internal/ui/menu.go:104 	| file://C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 17:01:17.284 [DEBUG] internal/ui/menu.go:113 	| 用户确认了操作
+2025-08-18 17:01:17.285 [DEBUG] internal/db/tree_node.go:172 	| 准备遍历目录 : C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 17:01:17.287 [ERROR] internal/db/tree_node.go:185 	| 存储节点数据失败json: unsupported value: encountered a cycle via *db.TreeNode
+2025-08-18 17:01:22.923 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 17:06:32.781 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 17:06:39.732 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 17:06:39.732 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 17:06:39.744 [ERROR] internal/db/tree_node.go:100 	| 获取存储节点数据失败: ISNULL
+2025-08-18 17:06:39.754 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 0 0 1 1 0 0 0 0 1 1 48}
+2025-08-18 17:06:39.770 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 17:06:39.771 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 17:06:40.404 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 17:06:40.415 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 17:06:42.804 [DEBUG] internal/ui/menu.go:28 	| Menu New->Directory
+2025-08-18 17:06:44.270 [DEBUG] internal/ui/menu.go:104 	| file://C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 17:06:45.201 [DEBUG] internal/ui/menu.go:113 	| 用户确认了操作
+2025-08-18 17:06:45.201 [DEBUG] internal/db/tree_node.go:172 	| 准备遍历目录 : C:/Users/Administrator/Pictures/人物-静/人物-静
+2025-08-18 17:06:51.799 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 17:06:51.828 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 17:06:59.336 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 17:06:59.336 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 17:06:59.365 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 1 1 2 1 0 0 8192 4695 1 0 0}
+2025-08-18 17:06:59.387 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 17:06:59.387 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 17:07:00.009 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 17:07:00.029 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 17:07:02.830 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png, 名称=girlNor-10.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png
+
+2025-08-18 17:07:02.832 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:07:02.832 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:07:02.834 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08879002054773938
+2025-08-18 17:07:02.835 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08879002054773938
+2025-08-18 17:07:02.836 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08879002054773938
+2025-08-18 17:07:02.840 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08879002054773938
+2025-08-18 17:07:02.841 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:07:02.842 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5891.556576240394
+2025-08-18 17:07:02.845 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5891.556576240394
+2025-08-18 17:07:02.848 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5891.556576240394
+2025-08-18 17:07:02.874 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000001000001110000010011000110110000110000
+2025-08-18 17:07:02.874 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100110000101100001100111111001000101100001100011001000010011110
+2025-08-18 17:07:02.875 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000110000000100000011100001111000011110000111000
+2025-08-18 17:07:02.875 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-10.png 29797 8bfee6564277c1e6360bcf88141da5e3 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png -rw-rw-rw- 2024年10月28日 17时50分58秒 &{FileAttributes:128 CreationTime:{LowDateTime:3816680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1984012234 HighDateTime:31199263} LastWriteTime:{LowDateTime:3816680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29797} 360 360 png 0 0  0        0.08879002054773938 0.12764743503389353 1.754435725630007 0.12918605576034306 {0.0013040123456790123 0.6895447530864197 0.12764743503389353 欠曝} 5891.556576240394 191.42646017551047 0.006663844466128273 0001000000101000001100000001000001110000010011000110110000110000 1100110000101100001100111111001000101100001100011001000010011110 0000000000011000000110000000100000011100001111000011110000111000}
+2025-08-18 17:07:02.889 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1794792090098276
+2025-08-18 17:07:02.889 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1787857774802133
+2025-08-18 17:07:02.889 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.17484039119102843
+2025-08-18 17:07:02.889 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16596924989837641
+2025-08-18 17:07:02.889 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16039788622940632
+2025-08-18 17:07:02.890 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06317400349106908
+2025-08-18 17:07:02.890 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.037851796944118984
+2025-08-18 17:07:02.890 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01872265129958633
+2025-08-18 17:07:02.890 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.011047081609717607
+2025-08-18 17:07:02.890 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009731952846655987
+2025-08-18 17:07:05.138 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png, 名称=girlNor-2.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png
+
+2025-08-18 17:07:05.140 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:07:05.140 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:07:05.143 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.17689171704463427
+2025-08-18 17:07:05.144 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.17689171704463427
+2025-08-18 17:07:05.145 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.17689171704463427
+2025-08-18 17:07:05.148 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.17689171704463427
+2025-08-18 17:07:05.149 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:07:05.150 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5626.75419312828
+2025-08-18 17:07:05.152 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5626.75419312828
+2025-08-18 17:07:05.155 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5626.75419312828
+2025-08-18 17:07:05.179 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000010100001011000010000000101010001110100
+2025-08-18 17:07:05.179 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100101100001101001110001110001111011000000011001010110011
+2025-08-18 17:07:05.179 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001000000011000000110000001110000111100001111000011110000101100
+2025-08-18 17:07:05.179 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-2.png 37972 fba22e272bbf351ac2e584002dbc4668 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png -rw-rw-rw- 2024年10月28日 17时50分46秒 &{FileAttributes:128 CreationTime:{LowDateTime:3696680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:2007095856 HighDateTime:31199263} LastWriteTime:{LowDateTime:3696680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:37972} 360 360 png 0 0  0        0.17689171704463427 0.23500983546355372 1.3658030062497624 0.1734740396638634 {0.0014814814814814814 0.6131558641975309 0.23500983546355372 欠曝} 5626.75419312828 46.010602713296606 0.00934826017033334 0001000000110000001100000010100001011000010000000101010001110100 1100101100101100001101001110001110001111011000000011001010110011 0001000000011000000110000001110000111100001111000011110000101100}
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.31096628698111767
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2400045868052901
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1407575873404174
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07728766913844508
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.05802308691996025
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04953749713324669
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04439645287057564
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027731060316489566
+2025-08-18 17:07:05.182 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.02654613561654308
+2025-08-18 17:07:05.184 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.024749636877914528
+2025-08-18 17:07:05.666 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png, 名称=girlNor-4.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png
+
+2025-08-18 17:07:05.667 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:07:05.667 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:07:05.670 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.11589488768511703
+2025-08-18 17:07:05.671 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.11589488768511703
+2025-08-18 17:07:05.672 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.11589488768511703
+2025-08-18 17:07:05.676 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.11589488768511703
+2025-08-18 17:07:05.677 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:07:05.678 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6477.975184176133
+2025-08-18 17:07:05.681 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6477.975184176133
+2025-08-18 17:07:05.684 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6477.975184176133
+2025-08-18 17:07:05.708 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000000100000001100010111100011011000010100000101000
+2025-08-18 17:07:05.708 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001100100111001011011001110001000100110001001100110000111001100
+2025-08-18 17:07:05.708 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000010000000100000011100001011000011110000011100
+2025-08-18 17:07:05.708 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-4.png 29964 429f23aaea9791fc160caaf02584bef2 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png -rw-rw-rw- 2024年10月28日 17时50分48秒 &{FileAttributes:128 CreationTime:{LowDateTime:3716680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:2012375830 HighDateTime:31199263} LastWriteTime:{LowDateTime:3716680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29964} 360 360 png 0 0  0        0.11589488768511703 0.10624324289517682 1.8001915292600323 0.10737036957863277 {0.0019367283950617283 0.7105941358024691 0.10624324289517682 欠曝} 6477.975184176133 111.48925070397802 0.005511028461695249 0001000000101000000100000001100010111100011011000010100000101000 1001100100111001011011001110001000100110001001100110000111001100 0000000000011000000010000000100000011100001011000011110000011100}
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.23063177734805276
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.15832374611411645
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.09551318140650626
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08251535994908575
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07928426308961398
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07906396103101364
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07074143881722272
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07049665875211122
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06983575257631018
+2025-08-18 17:07:05.716 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.063593860915967
+2025-08-18 17:07:06.517 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png, 名称=girlNor-7.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png
+
+2025-08-18 17:07:06.519 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:07:06.519 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:07:06.522 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.14381728495326723
+2025-08-18 17:07:06.523 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.14381728495326723
+2025-08-18 17:07:06.525 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.14381728495326723
+2025-08-18 17:07:06.527 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.14381728495326723
+2025-08-18 17:07:06.528 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:07:06.529 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5195.570721764223
+2025-08-18 17:07:06.533 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5195.570721764223
+2025-08-18 17:07:06.536 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5195.570721764223
+2025-08-18 17:07:06.559 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000001000001101100011010000100110001001000
+2025-08-18 17:07:06.559 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001101101101100011000110011011001110110011001010110110010010110
+2025-08-18 17:07:06.559 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001000000011000000110000000000000111100000110000001101000101100
+2025-08-18 17:07:06.559 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-7.png 37593 1fac196d7628faec40abd0fd3f344b67 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png -rw-rw-rw- 2024年10月28日 17时50分52秒 &{FileAttributes:128 CreationTime:{LowDateTime:3756680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:2020886066 HighDateTime:31199263} LastWriteTime:{LowDateTime:3756680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:37593} 360 360 png 0 0  0        0.14381728495326723 0.14844630447229987 1.5541036016101828 0.15365722411482177 {0.0014737654320987653 0.6534953703703704 0.14844630447229987 欠曝} 5195.570721764223 54.998195404514874 0.008741078595072225 0001000000110000001100000001000001101100011010000100110001001000 1001101101101100011000110011011001110110011001010110110010010110 0001000000011000000110000000000000111100000110000001101000101100}
+2025-08-18 17:07:06.577 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.266492668746154
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1709211280157871
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.13934687122031955
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.11441424236637171
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.0839646062766567
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07399155473507756
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07074500816941456
+2025-08-18 17:07:06.578 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.047552358520593294
+2025-08-18 17:07:06.579 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.022428756339253505
+2025-08-18 17:07:06.579 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.010142805610371973
+2025-08-18 17:07:07.800 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\manNor-10.png, 名称=manNor-10.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\manNor-10.png
+
+2025-08-18 17:07:07.802 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:07:07.802 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:07:07.804 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.17937043601610023
+2025-08-18 17:07:07.805 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.17937043601610023
+2025-08-18 17:07:07.807 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.17937043601610023
+2025-08-18 17:07:07.809 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.17937043601610023
+2025-08-18 17:07:07.810 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:07:07.812 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 4796.892932304211
+2025-08-18 17:07:07.815 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 4796.892932304211
+2025-08-18 17:07:07.817 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 4796.892932304211
+2025-08-18 17:07:07.839 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001010000001100001011100011110000111111001010100
+2025-08-18 17:07:07.841 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001110101101000011001001011011001010010001011010110001110010110
+2025-08-18 17:07:07.841 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001100000001000000110000001100000111100001111100011101000111100
+2025-08-18 17:07:07.841 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{manNor-10.png 38612 68e272b3663da9ef571d0a953d9a0dc2 C:\Users\Administrator\Pictures\人物-静\人物-静\manNor-10.png -rw-rw-rw- 2024年10月28日 17时50分42秒 &{FileAttributes:128 CreationTime:{LowDateTime:3656680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:2033716207 HighDateTime:31199263} LastWriteTime:{LowDateTime:3656680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:38612} 360 360 png 0 0  0        0.17937043601610023 0.2125572062091145 1.3298669637938005 0.14694224030759795 {0.006458333333333333 0.5993595679012346 0.2125572062091145 欠曝} 4796.892932304211 24.1926337631267 0.007936855396211015 0001000000110000001010000001100001011100011110000111111001010100 1001110101101000011001001011011001010010001011010110001110010110 0001100000001000000110000001100000111100001111100011101000111100}
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.33799860041987406
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.23297335123787188
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2274128572239139
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08261305392166135
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.055680593119361486
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.045353961379153825
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.008851398634463714
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007262686059047151
+2025-08-18 17:07:07.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.0018534980046526583
+2025-08-18 17:07:09.518 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 17:12:35.394 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 17:12:42.398 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 17:12:42.399 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 17:12:42.437 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 1 1 2 1 0 0 8192 4695 1 0 0}
+2025-08-18 17:12:42.458 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 17:12:42.458 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 17:12:43.080 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 17:12:43.094 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 17:12:45.467 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png
+
+2025-08-18 17:12:45.469 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:45.469 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:45.472 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:12:45.474 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:12:45.476 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:12:45.479 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:12:45.480 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:45.481 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:12:45.483 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:12:45.486 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:12:45.511 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:12:45.511 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:12:45.511 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:12:45.511 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1115418338 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:12:45.526 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:12:45.527 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:12:45.887 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png, 名称=girlNor-10.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png
+
+2025-08-18 17:12:45.889 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:45.889 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:45.891 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08879002054773938
+2025-08-18 17:12:45.892 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08879002054773938
+2025-08-18 17:12:45.893 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08879002054773938
+2025-08-18 17:12:45.897 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08879002054773938
+2025-08-18 17:12:45.898 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:45.899 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5891.556576240394
+2025-08-18 17:12:45.901 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5891.556576240394
+2025-08-18 17:12:45.906 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5891.556576240394
+2025-08-18 17:12:45.930 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000001000001110000010011000110110000110000
+2025-08-18 17:12:45.930 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100110000101100001100111111001000101100001100011001000010011110
+2025-08-18 17:12:45.930 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000110000000100000011100001111000011110000111000
+2025-08-18 17:12:45.930 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-10.png 29797 8bfee6564277c1e6360bcf88141da5e3 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png -rw-rw-rw- 2024年10月28日 17时50分58秒 &{FileAttributes:128 CreationTime:{LowDateTime:3816680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1119620550 HighDateTime:31199264} LastWriteTime:{LowDateTime:3816680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29797} 360 360 png 0 0  0        0.08879002054773938 0.12764743503389353 1.754435725630007 0.12918605576034306 {0.0013040123456790123 0.6895447530864197 0.12764743503389353 欠曝} 5891.556576240394 191.42646017551047 0.006663844466128273 0001000000101000001100000001000001110000010011000110110000110000 1100110000101100001100111111001000101100001100011001000010011110 0000000000011000000110000000100000011100001111000011110000111000}
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1794792090098276
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1787857774802133
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.17484039119102843
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16596924989837641
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16039788622940632
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06317400349106908
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.037851796944118984
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01872265129958633
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.011047081609717607
+2025-08-18 17:12:45.947 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009731952846655987
+2025-08-18 17:12:46.263 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png, 名称=girlNor-4.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png
+
+2025-08-18 17:12:46.265 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:46.265 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:46.267 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.11589488768511703
+2025-08-18 17:12:46.268 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.11589488768511703
+2025-08-18 17:12:46.268 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.11589488768511703
+2025-08-18 17:12:46.272 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.11589488768511703
+2025-08-18 17:12:46.274 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:46.275 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6477.975184176133
+2025-08-18 17:12:46.279 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6477.975184176133
+2025-08-18 17:12:46.281 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6477.975184176133
+2025-08-18 17:12:46.308 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000000100000001100010111100011011000010100000101000
+2025-08-18 17:12:46.308 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001100100111001011011001110001000100110001001100110000111001100
+2025-08-18 17:12:46.308 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000010000000100000011100001011000011110000011100
+2025-08-18 17:12:46.308 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-4.png 29964 429f23aaea9791fc160caaf02584bef2 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-4.png -rw-rw-rw- 2024年10月28日 17时50分48秒 &{FileAttributes:128 CreationTime:{LowDateTime:3716680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1123376496 HighDateTime:31199264} LastWriteTime:{LowDateTime:3716680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29964} 360 360 png 0 0  0        0.11589488768511703 0.10624324289517682 1.8001915292600323 0.10737036957863277 {0.0019367283950617283 0.7105941358024691 0.10624324289517682 欠曝} 6477.975184176133 111.48925070397802 0.005511028461695249 0001000000101000000100000001100010111100011011000010100000101000 1001100100111001011011001110001000100110001001100110000111001100 0000000000011000000010000000100000011100001011000011110000011100}
+2025-08-18 17:12:46.312 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.23063177734805276
+2025-08-18 17:12:46.312 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.15832374611411645
+2025-08-18 17:12:46.312 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.09551318140650626
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08251535994908575
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07928426308961398
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07906396103101364
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07074143881722272
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07049665875211122
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06983575257631018
+2025-08-18 17:12:46.313 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.063593860915967
+2025-08-18 17:12:46.651 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png, 名称=girlNor-7.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png
+
+2025-08-18 17:12:46.652 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:46.652 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:46.654 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.14381728495326723
+2025-08-18 17:12:46.656 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.14381728495326723
+2025-08-18 17:12:46.657 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.14381728495326723
+2025-08-18 17:12:46.660 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.14381728495326723
+2025-08-18 17:12:46.661 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:46.662 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5195.570721764223
+2025-08-18 17:12:46.665 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5195.570721764223
+2025-08-18 17:12:46.669 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5195.570721764223
+2025-08-18 17:12:46.692 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000001000001101100011010000100110001001000
+2025-08-18 17:12:46.692 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001101101101100011000110011011001110110011001010110110010010110
+2025-08-18 17:12:46.692 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001000000011000000110000000000000111100000110000001101000101100
+2025-08-18 17:12:46.692 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-7.png 37593 1fac196d7628faec40abd0fd3f344b67 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png -rw-rw-rw- 2024年10月28日 17时50分52秒 &{FileAttributes:128 CreationTime:{LowDateTime:3756680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1127252063 HighDateTime:31199264} LastWriteTime:{LowDateTime:3756680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:37593} 360 360 png 0 0  0        0.14381728495326723 0.14844630447229987 1.5541036016101828 0.15365722411482177 {0.0014737654320987653 0.6534953703703704 0.14844630447229987 欠曝} 5195.570721764223 54.998195404514874 0.008741078595072225 0001000000110000001100000001000001101100011010000100110001001000 1001101101101100011000110011011001110110011001010110110010010110 0001000000011000000110000000000000111100000110000001101000101100}
+2025-08-18 17:12:46.709 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.266492668746154
+2025-08-18 17:12:46.709 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1709211280157871
+2025-08-18 17:12:46.709 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.13934687122031955
+2025-08-18 17:12:46.709 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.11441424236637171
+2025-08-18 17:12:46.710 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.0839646062766567
+2025-08-18 17:12:46.710 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07399155473507756
+2025-08-18 17:12:46.710 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07074500816941456
+2025-08-18 17:12:46.710 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.047552358520593294
+2025-08-18 17:12:46.710 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.022428756339253505
+2025-08-18 17:12:46.710 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.010142805610371973
+2025-08-18 17:12:50.567 [DEBUG] internal/ui/menu.go:23 	| Menu New->File
+2025-08-18 17:12:53.801 [DEBUG] internal/ui/menu.go:147 	| girlNor-1.png
+2025-08-18 17:12:53.805 [DEBUG] internal/db/tree_node.go:141 	| %v&{girlNor-1.png girlNor-1.png C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png [] true <nil>}
+2025-08-18 17:12:54.801 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:12:54.802 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:54.802 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:54.806 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:12:54.807 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:12:54.809 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:12:54.811 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:12:54.813 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:54.814 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:12:54.816 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:12:54.819 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:12:54.842 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:12:54.842 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:12:54.843 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:12:54.843 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1208753993 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:12:54.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:12:55.546 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:/Users/Administrator/Pictures/人物-静/人物-静, 名称=C:/Users/Administrator/Pictures/人物-静/人物-静, 类型=文件夹 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静
+
+2025-08-18 17:12:55.546 [ERROR] internal/ui/left.go:57 	| 读取图片文件失败image: unknown format
+2025-08-18 17:12:56.922 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png, 名称=girlNor-10.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png
+
+2025-08-18 17:12:56.924 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:56.924 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:56.926 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08879002054773938
+2025-08-18 17:12:56.927 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08879002054773938
+2025-08-18 17:12:56.928 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08879002054773938
+2025-08-18 17:12:56.931 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08879002054773938
+2025-08-18 17:12:56.932 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:56.933 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5891.556576240394
+2025-08-18 17:12:56.936 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5891.556576240394
+2025-08-18 17:12:56.938 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5891.556576240394
+2025-08-18 17:12:56.962 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000001000001110000010011000110110000110000
+2025-08-18 17:12:56.962 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100110000101100001100111111001000101100001100011001000010011110
+2025-08-18 17:12:56.962 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000110000000100000011100001111000011110000111000
+2025-08-18 17:12:56.962 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-10.png 29797 8bfee6564277c1e6360bcf88141da5e3 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png -rw-rw-rw- 2024年10月28日 17时50分58秒 &{FileAttributes:128 CreationTime:{LowDateTime:3816680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1229964743 HighDateTime:31199264} LastWriteTime:{LowDateTime:3816680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29797} 360 360 png 0 0  0        0.08879002054773938 0.12764743503389353 1.754435725630007 0.12918605576034306 {0.0013040123456790123 0.6895447530864197 0.12764743503389353 欠曝} 5891.556576240394 191.42646017551047 0.006663844466128273 0001000000101000001100000001000001110000010011000110110000110000 1100110000101100001100111111001000101100001100011001000010011110 0000000000011000000110000000100000011100001111000011110000111000}
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1794792090098276
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1787857774802133
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.17484039119102843
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16596924989837641
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16039788622940632
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06317400349106908
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.037851796944118984
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01872265129958633
+2025-08-18 17:12:56.971 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.011047081609717607
+2025-08-18 17:12:56.972 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009731952846655987
+2025-08-18 17:12:57.279 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-5.png, 名称=girlNor-5.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-5.png
+
+2025-08-18 17:12:57.280 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:12:57.282 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:12:57.284 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.06150828177116575
+2025-08-18 17:12:57.285 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.06150828177116575
+2025-08-18 17:12:57.286 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.06150828177116575
+2025-08-18 17:12:57.289 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.06150828177116575
+2025-08-18 17:12:57.290 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:12:57.291 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6203.250345113197
+2025-08-18 17:12:57.293 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6203.250345113197
+2025-08-18 17:12:57.297 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6203.250345113197
+2025-08-18 17:12:57.317 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2614540187533352
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.23007140497547837
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.12464106929586054
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.11239295606434072
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08355144461667471
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07023606840647473
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04096256956267629
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03692221685767286
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.02218382334256601
+2025-08-18 17:12:57.318 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01758442812492059
+2025-08-18 17:12:57.321 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000000100000001000000110000001101000111010001011000
+2025-08-18 17:12:57.321 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001110000111001011100110110011000110011001001010011001111001110
+2025-08-18 17:12:57.321 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000110000001100000111100000111000001100000011000
+2025-08-18 17:12:57.321 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-5.png 30639 1f7b614f3b31260b0cf1a088f8b55979 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-5.png -rw-rw-rw- 2024年10月28日 17时50分50秒 &{FileAttributes:128 CreationTime:{LowDateTime:3736680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1233539412 HighDateTime:31199264} LastWriteTime:{LowDateTime:3736680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:30639} 360 360 png 0 0  0        0.06150828177116575 0.1166396267066254 1.9127219088608514 0.1346112063032866 {0.015439814814814814 0.7160185185185185 0.1166396267066254 欠曝} 6203.250345113197 82.64703362403507 0.008063116583623544 0001000000110000000100000001000000110000001101000111010001011000 1001110000111001011100110110011000110011001001010011001111001110 0000100000011000000110000001100000111100000111000001100000011000}
+2025-08-18 17:12:59.752 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 17:12:59.781 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 17:13:08.683 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 17:13:08.683 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 17:13:08.705 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 1 1 2 1 0 0 8192 4852 1 0 0}
+2025-08-18 17:13:08.727 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 17:13:08.727 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 17:13:09.384 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 17:13:09.400 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 17:13:16.660 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:13:16.662 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:16.662 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:16.665 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:16.667 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:16.668 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:16.671 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:16.672 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:16.673 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:16.676 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:16.679 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:16.704 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:16.704 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:16.704 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:16.704 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1427343417 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:16.722 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:18.797 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png
+
+2025-08-18 17:13:18.798 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:18.798 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:18.801 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:18.802 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:18.804 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:18.808 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:18.809 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:18.811 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:18.813 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:18.817 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:18.840 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:18.841 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:18.841 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:18.841 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1448713521 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:18.861 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:18.861 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:18.861 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:18.861 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:18.861 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:18.861 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:18.862 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:18.862 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:18.862 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:18.862 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:19.249 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png, 名称=girlNor-2.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png
+
+2025-08-18 17:13:19.251 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:19.251 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:19.253 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.17689171704463427
+2025-08-18 17:13:19.254 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.17689171704463427
+2025-08-18 17:13:19.257 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.17689171704463427
+2025-08-18 17:13:19.260 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.17689171704463427
+2025-08-18 17:13:19.261 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:19.262 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5626.75419312828
+2025-08-18 17:13:19.264 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5626.75419312828
+2025-08-18 17:13:19.267 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5626.75419312828
+2025-08-18 17:13:19.293 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000010100001011000010000000101010001110100
+2025-08-18 17:13:19.293 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100101100001101001110001110001111011000000011001010110011
+2025-08-18 17:13:19.293 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001000000011000000110000001110000111100001111000011110000101100
+2025-08-18 17:13:19.293 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-2.png 37972 fba22e272bbf351ac2e584002dbc4668 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png -rw-rw-rw- 2024年10月28日 17时50分46秒 &{FileAttributes:128 CreationTime:{LowDateTime:3696680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1453235440 HighDateTime:31199264} LastWriteTime:{LowDateTime:3696680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:37972} 360 360 png 0 0  0        0.17689171704463427 0.23500983546355372 1.3658030062497624 0.1734740396638634 {0.0014814814814814814 0.6131558641975309 0.23500983546355372 欠曝} 5626.75419312828 46.010602713296606 0.00934826017033334 0001000000110000001100000010100001011000010000000101010001110100 1100101100101100001101001110001110001111011000000011001010110011 0001000000011000000110000001110000111100001111000011110000101100}
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.31096628698111767
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2400045868052901
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1407575873404174
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07728766913844508
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.05802308691996025
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04953749713324669
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04439645287057564
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027731060316489566
+2025-08-18 17:13:19.297 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.02654613561654308
+2025-08-18 17:13:19.298 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.024749636877914528
+2025-08-18 17:13:19.886 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-5.png, 名称=girlNor-5.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-5.png
+
+2025-08-18 17:13:19.887 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:19.887 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:19.889 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.06150828177116575
+2025-08-18 17:13:19.891 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.06150828177116575
+2025-08-18 17:13:19.892 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.06150828177116575
+2025-08-18 17:13:19.896 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.06150828177116575
+2025-08-18 17:13:19.897 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:19.897 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6203.250345113197
+2025-08-18 17:13:19.900 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6203.250345113197
+2025-08-18 17:13:19.902 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6203.250345113197
+2025-08-18 17:13:19.920 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2614540187533352
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.23007140497547837
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.12464106929586054
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.11239295606434072
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08355144461667471
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07023606840647473
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04096256956267629
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03692221685767286
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.02218382334256601
+2025-08-18 17:13:19.921 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01758442812492059
+2025-08-18 17:13:19.927 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000000100000001000000110000001101000111010001011000
+2025-08-18 17:13:19.927 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001110000111001011100110110011000110011001001010011001111001110
+2025-08-18 17:13:19.927 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000110000001100000111100000111000001100000011000
+2025-08-18 17:13:19.927 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-5.png 30639 1f7b614f3b31260b0cf1a088f8b55979 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-5.png -rw-rw-rw- 2024年10月28日 17时50分50秒 &{FileAttributes:128 CreationTime:{LowDateTime:3736680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1459596656 HighDateTime:31199264} LastWriteTime:{LowDateTime:3736680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:30639} 360 360 png 0 0  0        0.06150828177116575 0.1166396267066254 1.9127219088608514 0.1346112063032866 {0.015439814814814814 0.7160185185185185 0.1166396267066254 欠曝} 6203.250345113197 82.64703362403507 0.008063116583623544 0001000000110000000100000001000000110000001101000111010001011000 1001110000111001011100110110011000110011001001010011001111001110 0000100000011000000110000001100000111100000111000001100000011000}
+2025-08-18 17:13:20.306 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png, 名称=girlNor-7.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png
+
+2025-08-18 17:13:20.308 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:20.308 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:20.310 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.14381728495326723
+2025-08-18 17:13:20.311 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.14381728495326723
+2025-08-18 17:13:20.312 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.14381728495326723
+2025-08-18 17:13:20.316 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.14381728495326723
+2025-08-18 17:13:20.317 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:20.318 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5195.570721764223
+2025-08-18 17:13:20.321 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5195.570721764223
+2025-08-18 17:13:20.324 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5195.570721764223
+2025-08-18 17:13:20.348 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000001000001101100011010000100110001001000
+2025-08-18 17:13:20.348 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1001101101101100011000110011011001110110011001010110110010010110
+2025-08-18 17:13:20.348 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001000000011000000110000000000000111100000110000001101000101100
+2025-08-18 17:13:20.348 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-7.png 37593 1fac196d7628faec40abd0fd3f344b67 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-7.png -rw-rw-rw- 2024年10月28日 17时50分52秒 &{FileAttributes:128 CreationTime:{LowDateTime:3756680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1463805494 HighDateTime:31199264} LastWriteTime:{LowDateTime:3756680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:37593} 360 360 png 0 0  0        0.14381728495326723 0.14844630447229987 1.5541036016101828 0.15365722411482177 {0.0014737654320987653 0.6534953703703704 0.14844630447229987 欠曝} 5195.570721764223 54.998195404514874 0.008741078595072225 0001000000110000001100000001000001101100011010000100110001001000 1001101101101100011000110011011001110110011001010110110010010110 0001000000011000000110000000000000111100000110000001101000101100}
+2025-08-18 17:13:20.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.266492668746154
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1709211280157871
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.13934687122031955
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.11441424236637171
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.0839646062766567
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07399155473507756
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07074500816941456
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.047552358520593294
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.022428756339253505
+2025-08-18 17:13:20.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.010142805610371973
+2025-08-18 17:13:21.668 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-3.png, 名称=girlNor-3.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-3.png
+
+2025-08-18 17:13:21.669 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:21.669 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:21.672 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.050244764273168506
+2025-08-18 17:13:21.673 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.050244764273168506
+2025-08-18 17:13:21.675 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.050244764273168506
+2025-08-18 17:13:21.678 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.050244764273168506
+2025-08-18 17:13:21.679 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:21.680 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6272.783075702204
+2025-08-18 17:13:21.682 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6272.783075702204
+2025-08-18 17:13:21.685 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6272.783075702204
+2025-08-18 17:13:21.709 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000011000001100100011000100101000000110000
+2025-08-18 17:13:21.709 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1000110001101001001100110110010000110010001110010110001111001100
+2025-08-18 17:13:21.709 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000100000001110000111000000100100011100000011100
+2025-08-18 17:13:21.709 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-3.png 36138 492cadecada1b3e0beb09cea2506a55d C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-3.png -rw-rw-rw- 2024年10月28日 17时50分46秒 &{FileAttributes:128 CreationTime:{LowDateTime:3696680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1477420101 HighDateTime:31199264} LastWriteTime:{LowDateTime:3696680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:36138} 360 360 png 0 0  0        0.050244764273168506 0.14787150952552552 1.8011926795878146 0.1471617011797869 {0.02322530864197531 0.6918364197530864 0.14787150952552552 欠曝} 6272.783075702204 66.50474774306984 0.0072332366710301564 0001000000110000001100000011000001100100011000100101000000110000 1000110001101001001100110110010000110010001110010110001111001100 0000000000011000000100000001110000111000000100100011100000011100}
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16971891465311142
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14383863704941624
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1282176264419841
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10939349627463268
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1083954227885709
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.09941276141401481
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.08943202655339694
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06522294176357264
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.05022862846134206
+2025-08-18 17:13:21.726 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03613954459995822
+2025-08-18 17:13:22.072 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png, 名称=girlNor-2.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png
+
+2025-08-18 17:13:22.074 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:22.074 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:22.076 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.17689171704463427
+2025-08-18 17:13:22.077 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.17689171704463427
+2025-08-18 17:13:22.078 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.17689171704463427
+2025-08-18 17:13:22.082 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.17689171704463427
+2025-08-18 17:13:22.083 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:22.084 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5626.75419312828
+2025-08-18 17:13:22.087 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5626.75419312828
+2025-08-18 17:13:22.089 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5626.75419312828
+2025-08-18 17:13:22.112 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000110000001100000010100001011000010000000101010001110100
+2025-08-18 17:13:22.112 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100101100001101001110001110001111011000000011001010110011
+2025-08-18 17:13:22.112 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0001000000011000000110000001110000111100001111000011110000101100
+2025-08-18 17:13:22.112 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-2.png 37972 fba22e272bbf351ac2e584002dbc4668 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-2.png -rw-rw-rw- 2024年10月28日 17时50分46秒 &{FileAttributes:128 CreationTime:{LowDateTime:3696680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1481465223 HighDateTime:31199264} LastWriteTime:{LowDateTime:3696680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:37972} 360 360 png 0 0  0        0.17689171704463427 0.23500983546355372 1.3658030062497624 0.1734740396638634 {0.0014814814814814814 0.6131558641975309 0.23500983546355372 欠曝} 5626.75419312828 46.010602713296606 0.00934826017033334 0001000000110000001100000010100001011000010000000101010001110100 1100101100101100001101001110001110001111011000000011001010110011 0001000000011000000110000001110000111100001111000011110000101100}
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.31096628698111767
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2400045868052901
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1407575873404174
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.07728766913844508
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.05802308691996025
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04953749713324669
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.04439645287057564
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027731060316489566
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.02654613561654308
+2025-08-18 17:13:22.116 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.024749636877914528
+2025-08-18 17:13:22.478 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png, 名称=girlNor-10.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png
+
+2025-08-18 17:13:22.479 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:22.480 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:22.481 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08879002054773938
+2025-08-18 17:13:22.482 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08879002054773938
+2025-08-18 17:13:22.484 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08879002054773938
+2025-08-18 17:13:22.488 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08879002054773938
+2025-08-18 17:13:22.489 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:22.490 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 5891.556576240394
+2025-08-18 17:13:22.494 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 5891.556576240394
+2025-08-18 17:13:22.498 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 5891.556576240394
+2025-08-18 17:13:22.525 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000001000001110000010011000110110000110000
+2025-08-18 17:13:22.525 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100110000101100001100111111001000101100001100011001000010011110
+2025-08-18 17:13:22.526 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000000000011000000110000000100000011100001111000011110000111000
+2025-08-18 17:13:22.526 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-10.png 29797 8bfee6564277c1e6360bcf88141da5e3 C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-10.png -rw-rw-rw- 2024年10月28日 17时50分58秒 &{FileAttributes:128 CreationTime:{LowDateTime:3816680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1485521019 HighDateTime:31199264} LastWriteTime:{LowDateTime:3816680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:29797} 360 360 png 0 0  0        0.08879002054773938 0.12764743503389353 1.754435725630007 0.12918605576034306 {0.0013040123456790123 0.6895447530864197 0.12764743503389353 欠曝} 5891.556576240394 191.42646017551047 0.006663844466128273 0001000000101000001100000001000001110000010011000110110000110000 1100110000101100001100111111001000101100001100011001000010011110 0000000000011000000110000000100000011100001111000011110000111000}
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1794792090098276
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1787857774802133
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.17484039119102843
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16596924989837641
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16039788622940632
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06317400349106908
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.037851796944118984
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01872265129958633
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.011047081609717607
+2025-08-18 17:13:22.534 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009731952846655987
+2025-08-18 17:13:23.039 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png
+
+2025-08-18 17:13:23.040 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:23.040 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:23.043 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:23.044 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:23.046 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:23.051 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:23.052 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:23.053 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:23.055 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:23.058 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:23.085 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:23.086 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:23.086 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:23.090 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:\Users\Administrator\Pictures\人物-静\人物-静\girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1491132960 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:23.100 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:25.315 [DEBUG] internal/ui/menu.go:23 	| Menu New->File
+2025-08-18 17:13:28.902 [DEBUG] internal/ui/menu.go:147 	| 12.png
+2025-08-18 17:13:28.906 [DEBUG] internal/db/tree_node.go:141 	| %v&{12.png 12.png C:/Users/Administrator/Pictures/12.png [] true <nil>}
+2025-08-18 17:13:29.872 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=12.png, 名称=12.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/12.png
+
+2025-08-18 17:13:29.889 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 1008|600|png
+2025-08-18 17:13:29.890 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{exif: failed to find exif intro marker})
+2025-08-18 17:13:29.923 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.7523446051527221
+2025-08-18 17:13:29.937 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.7523446051527221
+2025-08-18 17:13:29.952 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.7523446051527221
+2025-08-18 17:13:29.974 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.7523446051527221
+2025-08-18 17:13:29.987 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:30.001 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 10000
+2025-08-18 17:13:30.045 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 10000
+2025-08-18 17:13:30.068 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 10000
+2025-08-18 17:13:30.097 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000100001010000110100011101000110110001101010110011000101
+2025-08-18 17:13:30.097 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1110001100111000000111000001110000000001110000010000001100001110
+2025-08-18 17:13:30.097 [DEBUG] internal/img/get_info.go:192 	| 指纹3 1000000011000000101000000110000110100000011000000001000000100000
+2025-08-18 17:13:30.098 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{12.png 473691 b495e495cda7289ef124d6eefdb7edf3 C:/Users/Administrator/Pictures/12.png -rw-rw-rw- 2025年06月27日 16时16分31秒 &{FileAttributes:32 CreationTime:{LowDateTime:3495415145 HighDateTime:31188795} LastAccessTime:{LowDateTime:1559618511 HighDateTime:31199264} LastWriteTime:{LowDateTime:3383483451 HighDateTime:31188795} FileSizeHigh:0 FileSizeLow:473691} 1008 600 png 0 0  0        0.7523446051527221 0.1291050279697931 1.028955751586487 0.07328555633666066 {0.005006613756613757 0.664050925925926 0.1291050279697931 欠曝} 10000 215.1579773290423 0.0036054791172301683 0001000000100001010000110100011101000110110001101010110011000101 1110001100111000000111000001110000000001110000010000001100001110 1000000011000000101000000110000110100000011000000001000000100000}
+2025-08-18 17:13:30.494 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.6419635349201321
+2025-08-18 17:13:30.494 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1805955222222038
+2025-08-18 17:13:30.494 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06897449633707228
+2025-08-18 17:13:30.494 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03255088044608605
+2025-08-18 17:13:30.495 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.031059835835822554
+2025-08-18 17:13:30.495 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01536323273066825
+2025-08-18 17:13:30.495 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009345980399148827
+2025-08-18 17:13:30.495 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007707324031028323
+2025-08-18 17:13:30.495 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00701902201405463
+2025-08-18 17:13:30.495 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.005420171063783207
+2025-08-18 17:13:30.753 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:13:30.755 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:30.755 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:30.760 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:30.761 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:30.762 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:30.765 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:30.766 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:30.767 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:30.769 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:30.772 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:30.795 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:30.795 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:30.795 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:30.795 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1568278761 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:30.816 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:30.817 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:30.817 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:31.360 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=12.png, 名称=12.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/12.png
+
+2025-08-18 17:13:31.378 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 1008|600|png
+2025-08-18 17:13:31.378 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{exif: failed to find exif intro marker})
+2025-08-18 17:13:31.409 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.7523446051527221
+2025-08-18 17:13:31.423 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.7523446051527221
+2025-08-18 17:13:31.439 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.7523446051527221
+2025-08-18 17:13:31.460 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.7523446051527221
+2025-08-18 17:13:31.473 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:31.484 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 10000
+2025-08-18 17:13:31.521 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 10000
+2025-08-18 17:13:31.543 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 10000
+2025-08-18 17:13:31.569 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000100001010000110100011101000110110001101010110011000101
+2025-08-18 17:13:31.570 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1110001100111000000111000001110000000001110000010000001100001110
+2025-08-18 17:13:31.570 [DEBUG] internal/img/get_info.go:192 	| 指纹3 1000000011000000101000000110000110100000011000000001000000100000
+2025-08-18 17:13:31.570 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{12.png 473691 b495e495cda7289ef124d6eefdb7edf3 C:/Users/Administrator/Pictures/12.png -rw-rw-rw- 2025年06月27日 16时16分31秒 &{FileAttributes:32 CreationTime:{LowDateTime:3495415145 HighDateTime:31188795} LastAccessTime:{LowDateTime:1574500240 HighDateTime:31199264} LastWriteTime:{LowDateTime:3383483451 HighDateTime:31188795} FileSizeHigh:0 FileSizeLow:473691} 1008 600 png 0 0  0        0.7523446051527221 0.1291050279697931 1.028955751586487 0.07328555633666066 {0.005006613756613757 0.664050925925926 0.1291050279697931 欠曝} 10000 215.1579773290423 0.0036054791172301683 0001000000100001010000110100011101000110110001101010110011000101 1110001100111000000111000001110000000001110000010000001100001110 1000000011000000101000000110000110100000011000000001000000100000}
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.6419635349201321
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1805955222222038
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06897449633707228
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03255088044608605
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.031059835835822554
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01536323273066825
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009345980399148827
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007707324031028323
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00701902201405463
+2025-08-18 17:13:31.977 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.005420171063783207
+2025-08-18 17:13:33.145 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:13:33.147 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:33.147 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:33.149 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:33.150 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:33.151 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:33.154 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:33.155 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:33.156 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:33.159 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:33.162 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:33.187 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:33.187 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:33.187 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:33.187 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1592198581 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:33.203 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:33.204 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:33.204 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:33.204 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:34.531 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=12.png, 名称=12.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/12.png
+
+2025-08-18 17:13:34.548 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 1008|600|png
+2025-08-18 17:13:34.548 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{exif: failed to find exif intro marker})
+2025-08-18 17:13:34.579 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.7523446051527221
+2025-08-18 17:13:34.595 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.7523446051527221
+2025-08-18 17:13:34.609 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.7523446051527221
+2025-08-18 17:13:34.630 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.7523446051527221
+2025-08-18 17:13:34.644 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:34.653 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 10000
+2025-08-18 17:13:34.691 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 10000
+2025-08-18 17:13:34.715 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 10000
+2025-08-18 17:13:34.739 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000100001010000110100011101000110110001101010110011000101
+2025-08-18 17:13:34.739 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1110001100111000000111000001110000000001110000010000001100001110
+2025-08-18 17:13:34.739 [DEBUG] internal/img/get_info.go:192 	| 指纹3 1000000011000000101000000110000110100000011000000001000000100000
+2025-08-18 17:13:34.740 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{12.png 473691 b495e495cda7289ef124d6eefdb7edf3 C:/Users/Administrator/Pictures/12.png -rw-rw-rw- 2025年06月27日 16时16分31秒 &{FileAttributes:32 CreationTime:{LowDateTime:3495415145 HighDateTime:31188795} LastAccessTime:{LowDateTime:1606201305 HighDateTime:31199264} LastWriteTime:{LowDateTime:3383483451 HighDateTime:31188795} FileSizeHigh:0 FileSizeLow:473691} 1008 600 png 0 0  0        0.7523446051527221 0.1291050279697931 1.028955751586487 0.07328555633666066 {0.005006613756613757 0.664050925925926 0.1291050279697931 欠曝} 10000 215.1579773290423 0.0036054791172301683 0001000000100001010000110100011101000110110001101010110011000101 1110001100111000000111000001110000000001110000010000001100001110 1000000011000000101000000110000110100000011000000001000000100000}
+2025-08-18 17:13:35.136 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.6419635349201321
+2025-08-18 17:13:35.136 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1805955222222038
+2025-08-18 17:13:35.136 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06897449633707228
+2025-08-18 17:13:35.136 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03255088044608605
+2025-08-18 17:13:35.137 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.031059835835822554
+2025-08-18 17:13:35.137 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01536323273066825
+2025-08-18 17:13:35.137 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009345980399148827
+2025-08-18 17:13:35.137 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007707324031028323
+2025-08-18 17:13:35.137 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00701902201405463
+2025-08-18 17:13:35.137 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.005420171063783207
+2025-08-18 17:13:35.311 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:13:35.312 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:35.312 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:35.314 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:35.315 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:35.316 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:35.319 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:35.321 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:35.322 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:35.325 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:35.328 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:35.353 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:35.353 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:35.353 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:35.353 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1613845473 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:35.367 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:35.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:35.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:35.369 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:36.046 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=12.png, 名称=12.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/12.png
+
+2025-08-18 17:13:36.064 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 1008|600|png
+2025-08-18 17:13:36.064 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{exif: failed to find exif intro marker})
+2025-08-18 17:13:36.097 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.7523446051527221
+2025-08-18 17:13:36.110 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.7523446051527221
+2025-08-18 17:13:36.127 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.7523446051527221
+2025-08-18 17:13:36.147 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.7523446051527221
+2025-08-18 17:13:36.163 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:36.174 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 10000
+2025-08-18 17:13:36.209 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 10000
+2025-08-18 17:13:36.231 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 10000
+2025-08-18 17:13:36.262 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000100001010000110100011101000110110001101010110011000101
+2025-08-18 17:13:36.262 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1110001100111000000111000001110000000001110000010000001100001110
+2025-08-18 17:13:36.262 [DEBUG] internal/img/get_info.go:192 	| 指纹3 1000000011000000101000000110000110100000011000000001000000100000
+2025-08-18 17:13:36.263 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{12.png 473691 b495e495cda7289ef124d6eefdb7edf3 C:/Users/Administrator/Pictures/12.png -rw-rw-rw- 2025年06月27日 16时16分31秒 &{FileAttributes:32 CreationTime:{LowDateTime:3495415145 HighDateTime:31188795} LastAccessTime:{LowDateTime:1621368061 HighDateTime:31199264} LastWriteTime:{LowDateTime:3383483451 HighDateTime:31188795} FileSizeHigh:0 FileSizeLow:473691} 1008 600 png 0 0  0        0.7523446051527221 0.1291050279697931 1.028955751586487 0.07328555633666066 {0.005006613756613757 0.664050925925926 0.1291050279697931 欠曝} 10000 215.1579773290423 0.0036054791172301683 0001000000100001010000110100011101000110110001101010110011000101 1110001100111000000111000001110000000001110000010000001100001110 1000000011000000101000000110000110100000011000000001000000100000}
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.6419635349201321
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1805955222222038
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06897449633707228
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03255088044608605
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.031059835835822554
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01536323273066825
+2025-08-18 17:13:36.653 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009345980399148827
+2025-08-18 17:13:36.654 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007707324031028323
+2025-08-18 17:13:36.654 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00701902201405463
+2025-08-18 17:13:36.654 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.005420171063783207
+2025-08-18 17:13:37.679 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:13:37.680 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:37.681 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:37.684 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:37.686 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:37.688 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:37.690 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:37.692 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:37.692 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:37.694 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:37.697 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:37.721 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:37.721 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:37.721 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:37.721 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1637539119 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:37.737 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:37.737 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:37.737 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:37.737 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:37.738 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:37.738 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:37.738 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:37.738 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:37.738 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:37.738 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:39.839 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground
+2025-08-18 17:13:39.855 [DEBUG] mangenotwork/MyPicViu/main.go:55 	| Lifecycle: Stopped
+2025-08-18 17:13:47.511 [DEBUG] mangenotwork/MyPicViu/main.go:114 	| 初始化DB
+2025-08-18 17:13:47.512 [DEBUG] mangenotwork/MyPicViu/main.go:117 	| 应用数据文件: C:\Users\Administrator\AppData\Roaming\MyPicViu
+2025-08-18 17:13:47.539 [DEBUG] mangenotwork/MyPicViu/main.go:128 	| {0 0 1 1 2 1 0 0 8192 4966 1 0 0}
+2025-08-18 17:13:47.568 [DEBUG] mangenotwork/MyPicViu/main.go:141 	| 111111111
+2025-08-18 17:13:47.568 [DEBUG] internal/ui/left.go:22 	| 初始化UI
+2025-08-18 17:13:48.199 [DEBUG] mangenotwork/MyPicViu/main.go:58 	| Lifecycle: Entered Foreground
+2025-08-18 17:13:48.214 [DEBUG] mangenotwork/MyPicViu/main.go:52 	| Lifecycle: Started
+2025-08-18 17:13:49.241 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=12.png, 名称=12.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/12.png
+
+2025-08-18 17:13:49.259 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 1008|600|png
+2025-08-18 17:13:49.259 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{exif: failed to find exif intro marker})
+2025-08-18 17:13:49.294 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.7523446051527221
+2025-08-18 17:13:49.308 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.7523446051527221
+2025-08-18 17:13:49.326 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.7523446051527221
+2025-08-18 17:13:49.347 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.7523446051527221
+2025-08-18 17:13:49.362 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:49.371 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 10000
+2025-08-18 17:13:49.412 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 10000
+2025-08-18 17:13:49.432 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 10000
+2025-08-18 17:13:49.457 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000100001010000110100011101000110110001101010110011000101
+2025-08-18 17:13:49.457 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1110001100111000000111000001110000000001110000010000001100001110
+2025-08-18 17:13:49.457 [DEBUG] internal/img/get_info.go:192 	| 指纹3 1000000011000000101000000110000110100000011000000001000000100000
+2025-08-18 17:13:49.458 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{12.png 473691 b495e495cda7289ef124d6eefdb7edf3 C:/Users/Administrator/Pictures/12.png -rw-rw-rw- 2025年06月27日 16时16分31秒 &{FileAttributes:32 CreationTime:{LowDateTime:3495415145 HighDateTime:31188795} LastAccessTime:{LowDateTime:1753312166 HighDateTime:31199264} LastWriteTime:{LowDateTime:3383483451 HighDateTime:31188795} FileSizeHigh:0 FileSizeLow:473691} 1008 600 png 0 0  0        0.7523446051527221 0.1291050279697931 1.028955751586487 0.07328555633666066 {0.005006613756613757 0.664050925925926 0.1291050279697931 欠曝} 10000 215.1579773290423 0.0036054791172301683 0001000000100001010000110100011101000110110001101010110011000101 1110001100111000000111000001110000000001110000010000001100001110 1000000011000000101000000110000110100000011000000001000000100000}
+2025-08-18 17:13:49.858 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.6419635349201321
+2025-08-18 17:13:49.858 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.1805955222222038
+2025-08-18 17:13:49.858 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.06897449633707228
+2025-08-18 17:13:49.858 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.03255088044608605
+2025-08-18 17:13:49.858 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.031059835835822554
+2025-08-18 17:13:49.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.01536323273066825
+2025-08-18 17:13:49.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.009345980399148827
+2025-08-18 17:13:49.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007707324031028323
+2025-08-18 17:13:49.859 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00701902201405463
+2025-08-18 17:13:49.860 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.005420171063783207
+2025-08-18 17:13:49.936 [DEBUG] internal/ui/left.go:41 	| 节点被点击: ID=girlNor-1.png, 名称=girlNor-1.png, 类型=文件 文件路径=C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png
+
+2025-08-18 17:13:49.937 [DEBUG] internal/img/get_info.go:112 	| 图片宽高格式 : 360|360|png
+2025-08-18 17:13:49.937 [ERROR] internal/img/get_exif.go:17 	| 解析EXIF失败: %!w(*errors.errorString=&{EOF})
+2025-08-18 17:13:49.939 [DEBUG] internal/img/get_info.go:142 	| 饱和度 ： 0.08354293825276819
+2025-08-18 17:13:49.941 [DEBUG] internal/img/get_info.go:148 	| 亮度 ： 0.08354293825276819
+2025-08-18 17:13:49.943 [DEBUG] internal/img/get_info.go:154 	| 对比度 ： 0.08354293825276819
+2025-08-18 17:13:49.946 [DEBUG] internal/img/get_info.go:160 	| 锐度 ： 0.08354293825276819
+2025-08-18 17:13:49.947 [DEBUG] internal/img/get_info.go:166 	| 曝光度 ： 欠曝
+2025-08-18 17:13:49.948 [DEBUG] internal/img/get_info.go:172 	| 色温 ： 6144.641666817489
+2025-08-18 17:13:49.950 [DEBUG] internal/img/get_info.go:178 	| 色调 ： 6144.641666817489
+2025-08-18 17:13:49.953 [DEBUG] internal/img/get_info.go:184 	| 噪点值 ： 6144.641666817489
+2025-08-18 17:13:49.976 [DEBUG] internal/img/get_info.go:190 	| 指纹1 0001000000101000001100000110100001010000011011001010010000110000
+2025-08-18 17:13:49.976 [DEBUG] internal/img/get_info.go:191 	| 指纹2 1100101100111001001110001101001001101101011001100011001110001001
+2025-08-18 17:13:49.976 [DEBUG] internal/img/get_info.go:192 	| 指纹3 0000100000011000000010000011100000111100011111000001110000011000
+2025-08-18 17:13:49.976 [DEBUG] internal/ui/middle.go:118 	| 图片信息: %+v&{girlNor-1.png 34776 a107844d527c1e20b7fa895701308c8c C:/Users/Administrator/Pictures/人物-静/人物-静/girlNor-1.png -rw-rw-rw- 2024年10月28日 17时50分44秒 &{FileAttributes:128 CreationTime:{LowDateTime:3676680704 HighDateTime:31140126} LastAccessTime:{LowDateTime:1760102767 HighDateTime:31199264} LastWriteTime:{LowDateTime:3676680704 HighDateTime:31140126} FileSizeHigh:0 FileSizeLow:34776} 360 360 png 0 0  0        0.08354293825276819 0.20940476873638936 1.4681290090889794 0.1586203686962618 {0.02422067901234568 0.6272222222222222 0.20940476873638936 欠曝} 6144.641666817489 41.00964748081099 0.008506419995122645 0001000000101000001100000110100001010000011011001010010000110000 1100101100111001001110001101001001101101011001100011001110001001 0000100000011000000010000011100000111100011111000001110000011000}
+2025-08-18 17:13:49.993 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2640158163368234
+2025-08-18 17:13:49.993 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.2004680344570195
+2025-08-18 17:13:49.993 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.16324719078456293
+2025-08-18 17:13:49.993 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.14753172345619237
+2025-08-18 17:13:49.993 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.10097036454235511
+2025-08-18 17:13:49.994 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.066654562327261
+2025-08-18 17:13:49.994 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.027779458936028564
+2025-08-18 17:13:49.994 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.013375295043273014
+2025-08-18 17:13:49.994 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.00879581996812524
+2025-08-18 17:13:49.994 [DEBUG] internal/ui/left.go:156 	| item.Percent = 0.007161734148358853
+2025-08-18 17:13:51.776 [DEBUG] mangenotwork/MyPicViu/main.go:61 	| Lifecycle: Exited Foreground

@@ -1,6 +1,9 @@
 package utils
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 // SizeFormat 字节的单位转换 保留两位小数
 func SizeFormat(size int64) string {
@@ -18,4 +21,10 @@ func SizeFormat(size int64) string {
 	} else { //if fileSize < (1024 * 1024 * 1024 * 1024 * 1024 * 1024)
 		return fmt.Sprintf("%.2fEB", float64(size)/float64(1024*1024*1024*1024*1024))
 	}
+}
+
+// AnyToJsonB interface{} -> json string
+func AnyToJsonB(data interface{}) ([]byte, error) {
+	jsonStr, err := json.Marshal(data)
+	return jsonStr, err
 }

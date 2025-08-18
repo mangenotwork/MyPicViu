@@ -15,7 +15,13 @@ import (
 	"os"
 )
 
-var tree, dataManager = db.CreateCustomTree(db.TreeData)
+var tree *widget.Tree
+var dataManager *db.TreeDataManager
+
+func InitUI() {
+	logger.Debug("初始化UI")
+	tree, dataManager = db.CreateCustomTree(db.TreeData)
+}
 
 func LeftContainer() *fyne.Container {
 

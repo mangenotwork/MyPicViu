@@ -11,12 +11,12 @@ import (
 
 // 自定义数据结构：表示目录树节点
 type TreeNode struct {
-	ID       string      // 节点唯一标识
-	Name     string      // 节点显示名称
-	FilePath string      // 文件路径
-	Children []*TreeNode // 子节点
-	IsFile   bool        // 区分文件(叶子)和文件夹(分支)
-	Parent   *TreeNode   // 父节点引用
+	ID       string      `json:"id"`       // 节点唯一标识
+	Name     string      `json:"name"`     // 节点显示名称
+	FilePath string      `json:"filePath"` // 文件路径
+	Children []*TreeNode `json:"children"` // 子节点
+	IsFile   bool        `json:"isFile"`   // 区分文件(叶子)和文件夹(分支)
+	Parent   *TreeNode   `json:"-"`        // 父节点引用
 }
 
 // 树数据管理器
@@ -88,34 +88,37 @@ func (m *TreeDataManager) IsBranch(id string) bool {
 	return node != nil && !node.IsFile
 }
 
-var TreeData = buildTreeData()
+var TreeData []*TreeNode
 
 //var BrowseTree = createCustomTree(TreeData)
 
-func buildTreeData() []*TreeNode {
-	return []*TreeNode{
-		{
-			ID:   "a",
-			Name: "a",
-			Children: []*TreeNode{
-				{ID: "a1", Name: "a1", IsFile: false, Children: []*TreeNode{{ID: "a3", Name: "a3", IsFile: true}}},
-				{ID: "a2", Name: "a2", IsFile: true},
-			},
-			IsFile: false, // 是文件夹(分支)
-		},
-		{
-			ID:       "b",
-			Name:     "b",
-			Children: []*TreeNode{},
-			IsFile:   false, // 是文件夹(分支)，但没有子节点
-		},
-		{
-			ID:       "c",
-			Name:     "c",
-			Children: []*TreeNode{},
-			IsFile:   true, // 是文件(叶子)
-		},
+func PreOrderTraversal(node *TreeNode, handler func(*TreeNode)) {
+	if node == nil {
+		return
 	}
+	// 处理当前节点
+	handler(node)
+	// 递归遍历子节点
+	for _, child := range node.Children {
+		PreOrderTraversal(child, handler)
+	}
+}
+
+func buildTreeData() []*TreeNode {
+
+	data := make([]*TreeNode, 0)
+	err := DB.Get(TreeNodeTable, TreeNodeKey, &data)
+	if err != nil {
+		logger.Error("获取存储节点数据失败: ", err)
+	}
+
+	for _, node := range data {
+		PreOrderTraversal(node, func(node *TreeNode) {
+			node.Parent = node
+		})
+	}
+
+	return data
 }
 
 // 在根节点动态添加节点
@@ -129,6 +132,11 @@ func (m *TreeDataManager) AddRootFileNode(name, filePath string) bool {
 
 	// 添加到根节点
 	m.rootNodes = append(m.rootNodes, newNode)
+	TreeData = append(TreeData, newNode)
+	err := DB.Set(TreeNodeTable, TreeNodeKey, &TreeData)
+	if err != nil {
+		logger.Error("存储节点数据失败", err)
+	}
 
 	logger.Debug("%v", newNode)
 
@@ -166,6 +174,11 @@ func (m *TreeDataManager) AddRootDirNode(dir string) bool {
 
 	// 添加到根节点列表
 	m.rootNodes = append(m.rootNodes, newNode)
+	TreeData = append(TreeData, newNode)
+	err = DB.Set(TreeNodeTable, TreeNodeKey, &TreeData)
+	if err != nil {
+		logger.Error("存储节点数据失败", err)
+	}
 
 	// 更新节点映射（使用唯一ID）
 	m.nodeMap[newNode.ID] = newNode
