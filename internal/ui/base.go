@@ -7,6 +7,7 @@ import (
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/layout"
+	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 )
 
@@ -39,44 +40,86 @@ var ImgColorClustersViewContainer = container.NewStack()
 // OpenInitContainer 初始化打开图片的按钮
 var OpenInitContainer = container.New(layout.NewVBoxLayout())
 
-// 创建包含图片和控制按钮的内容
-func createContent(img *canvas.Image, scale *float64, originalSize *fyne.Size) fyne.CanvasObject {
+// ImgOperateContainer 图片信息与交互区  在右边
+var ImgOperateContainer = container.NewVBox()
+
+// ImgInfoTextContainer 图片信息文本区
+var ImgInfoTextContainer = widget.NewAccordion()
+
+var ImgOperateImgOperateAbilityContainer = container.NewStack()
+
+// ImgCanvasObject 创建包含图片和控制按钮的内容
+func ImgCanvasObject(img *canvas.Image, scale *float64, originalSize *fyne.Size) fyne.CanvasObject {
+
 	// 放大按钮
-	zoomInBtn := widget.NewButton("放大", func() {
-		if img == nil {
-			return
-		}
-		*scale += 0.2
-		updateImageSize(img, scale, originalSize)
-	})
+	ImgZoomInBtn := &widget.Button{
+		Icon: theme.ZoomInIcon(),
+		OnTapped: func() {
+			if img == nil {
+				return
+			}
+			*scale += 0.2
+			updateImageSize(img, scale, originalSize)
+		},
+	}
 
 	// 缩小按钮
-	zoomOutBtn := widget.NewButton("缩小", func() {
-		if img == nil {
-			return
-		}
-		*scale -= 0.2
-		if *scale < 0.2 { // 限制最小缩放
-			*scale = 0.2
-		}
-		updateImageSize(img, scale, originalSize)
-	})
+	ImgZoomOutBtn := &widget.Button{
+		Icon: theme.ZoomOutIcon(),
+		OnTapped: func() {
+			if img == nil {
+				return
+			}
+			*scale -= 0.2
+			if *scale < 0.2 { // 限制最小缩放
+				*scale = 0.2
+			}
+			updateImageSize(img, scale, originalSize)
+		},
+	}
 
 	// 重置按钮
-	resetBtn := widget.NewButton("重置大小", func() {
-		if img == nil {
-			return
-		}
-		*scale = 1.0
-		updateImageSize(img, scale, originalSize)
-	})
+	ImgZoomResetBtn := &widget.Button{
+		Icon: theme.ViewRefreshIcon(),
+		OnTapped: func() {
+			if img == nil {
+				return
+			}
+			*scale = 1.0
+			updateImageSize(img, scale, originalSize)
+		},
+	}
+
+	PrevBtn := &widget.Button{
+		Icon: theme.NavigateBackIcon(),
+		OnTapped: func() {
+			logger.Debug("上一个")
+			// todo ...
+		},
+	}
+
+	NextBtn := &widget.Button{
+		Icon: theme.NavigateNextIcon(),
+		OnTapped: func() {
+			logger.Debug("下一个")
+			// todo ...
+		},
+	}
 
 	// 按钮容器
 	controls := container.NewHBox(
-		//openNewBtn,
-		zoomInBtn,
-		zoomOutBtn,
-		resetBtn,
+		layout.NewSpacer(),
+		PrevBtn,
+		ImgZoomInBtn,
+		ImgZoomOutBtn,
+		ImgZoomResetBtn,
+		NextBtn,
+		layout.NewSpacer(),
+	)
+
+	controls2 := container.NewVBox(
+		layout.NewSpacer(),
+		controls,
 	)
 
 	// 图片容器（使用滚动容器，方便查看大图）
@@ -85,8 +128,8 @@ func createContent(img *canvas.Image, scale *float64, originalSize *fyne.Size) f
 
 	// 主容器
 	return container.NewVBox(
-		controls,
 		scrollContainer,
+		controls2,
 	)
 }
 

@@ -7,7 +7,6 @@ import (
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/widget"
 	"image"
-	"image/color"
 	"os"
 )
 
@@ -78,10 +77,10 @@ func TreeOnSelected() func(uid widget.TreeNodeID) {
 		imgObj.SetMinSize(originalSize)
 		scale := 1.0
 		ImgViewContainer.RemoveAll()
-		background := canvas.NewRectangle(color.Black)
-		background.SetMinSize(fyne.NewSize(0, 0))
+		background := canvas.NewRasterWithPixels(checkerPattern)
+		background.SetMinSize(fyne.NewSize(280, 280))
 		ImgViewContainer.Add(background)
-		ImgViewContainer.Add(createContent(imgObj, &scale, &originalSize))
+		ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
 		ImgViewContainer.Refresh()
 
 		// 计算颜色分布
