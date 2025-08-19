@@ -1,8 +1,10 @@
 package img
 
 import (
+	"MyPicViu/common/logger"
 	"fmt"
 	"image"
+	"image/color"
 )
 
 // 饱和度
@@ -93,4 +95,31 @@ func calculateImageSaturation(imgData image.Image) (float64, error) {
 	// 返回平均饱和度
 	averageSaturation := totalSaturation / float64(totalPixels)
 	return averageSaturation, nil
+}
+
+func SetImageSaturation(imgData image.Image, value float64) image.Image {
+	logger.Debug("设置饱和度 : ", value)
+	bounds := imgData.Bounds()
+	result := image.NewRGBA(bounds)
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+			r = r / 256
+			g = g / 256
+			b = b / 256
+			h, s, v := RGBToHSV(uint8(r), uint8(g), uint8(b))
+
+			// 调整饱和度
+			s += value
+			if s < 0 {
+				s = 0
+			} else if s > 1 {
+				s = 1
+			}
+
+			r1, g1, b1 := HSVToRGB(h, s, v)
+			result.Set(x, y, color.RGBA{r1, g1, b1, uint8(a)})
+		}
+	}
+	return result
 }

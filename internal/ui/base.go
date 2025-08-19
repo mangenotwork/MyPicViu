@@ -55,7 +55,7 @@ var ImgOperateContainer = container.NewVBox()
 // ImgInfoTextContainer 图片信息文本区
 var ImgInfoTextContainer = widget.NewAccordion()
 
-var ImgOperateImgOperateAbilityContainer = container.NewStack()
+var ImgOperateImgOperateAbilityContainer = container.New(layout.NewVBoxLayout())
 
 // 创建弹出菜单
 var popupMenu = fyne.NewMenu("操作",

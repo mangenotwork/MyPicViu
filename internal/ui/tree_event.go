@@ -75,6 +75,8 @@ func TreeOnBranch() func(uid widget.TreeNodeID) {
 //	return l
 //}
 
+var NowImgData image.Image
+
 // ShowImg 打开并显示图片
 func ShowImg(filePath string) {
 
@@ -91,14 +93,14 @@ func ShowImg(filePath string) {
 		_ = reader.Close()
 	}()
 
-	imgData, _, err := image.Decode(reader)
+	NowImgData, _, err = image.Decode(reader)
 	if err != nil {
 		logger.Error("读取图片文件失败", err)
 		return
 	}
 
 	// 创建Fyne图片对象
-	imgObj := canvas.NewImageFromImage(imgData)
+	imgObj := canvas.NewImageFromImage(NowImgData)
 	imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
 
 	dx := ImgViewContainer.Size().Width
@@ -136,7 +138,7 @@ func ShowImg(filePath string) {
 
 	// 计算颜色分布
 	go func() {
-		colorData := img.GetClusters(imgData)
+		colorData := img.GetClusters(NowImgData)
 
 		// 创建颜色分布条图片（尺寸为800x100）
 		barHeight := ImgColorClustersViewContainer.Size().Height
@@ -158,8 +160,8 @@ func ShowImg(filePath string) {
 	go func() {
 		info := &img.ImgInfo{
 			FilePath: filePath,
-			Width:    imgData.Bounds().Dx(),
-			Height:   imgData.Bounds().Dy(),
+			Width:    NowImgData.Bounds().Dx(),
+			Height:   NowImgData.Bounds().Dy(),
 		}
 		info.GetFileInfo()
 		info.GetImgInfo()
