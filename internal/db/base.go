@@ -103,7 +103,6 @@ func NewLocalDB(tables []string, path string) *LocalDB {
 func InitDB(dbPath string) {
 	DB = NewLocalDB(Tables, dbPath)
 	DB.Init()
-	TreeData = buildTreeData()
 }
 
 func (ldb *LocalDB) Open() {

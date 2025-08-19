@@ -1,8 +1,11 @@
 package utils
 
 import (
+	"MyPicViu/common/logger"
 	"fmt"
+	"net/http"
 	"os"
+	"sync"
 )
 
 // CopyFileHandle 创建一个新的*os.File句柄，指向与源文件相同的路径
@@ -27,4 +30,47 @@ func CopyFileHandle(src *os.File) (*os.File, error) {
 	}
 
 	return newFile, nil
+}
+
+// 缓冲区对象池：缓存512字节的字节切片
+var bufferPool = sync.Pool{
+	// New函数：当池为空时，创建新的缓冲区
+	New: func() interface{} {
+		return make([]byte, 512) // 固定512字节，满足http.DetectContentType需求
+	},
+}
+
+// DetectByStdLib 使用标准库（基础类型识别）
+func DetectByStdLib(filePath string) (string, error) {
+	buf := bufferPool.Get().([]byte)
+	defer bufferPool.Put(buf)
+
+	file, err := os.OpenFile(filePath, os.O_RDONLY, 0)
+	if err != nil {
+		return "", err
+	}
+	defer func() {
+		_ = file.Close()
+	}()
+
+	n, err := file.Read(buf)
+	if err != nil {
+		return "", err
+	}
+
+	return http.DetectContentType(buf[:n]), nil
+}
+
+func IsImgFile(filePath string) bool {
+	ext, err := DetectByStdLib(filePath)
+	if err != nil {
+		logger.Error("获取文件类型失败: ", err)
+		return false
+	}
+	for _, v := range []string{"image/png", "image/jpeg", "image/gif", "image/webp", "image/bmp", "image/tiff", "image/svg+xml"} {
+		if ext == v {
+			return true
+		}
+	}
+	return false
 }

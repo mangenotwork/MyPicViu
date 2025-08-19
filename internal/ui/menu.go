@@ -11,15 +11,15 @@ import (
 )
 
 // MakeMenu 菜单
-func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
+func MakeMenu() *fyne.MainMenu {
 	newItem := fyne.NewMenuItem("打开", nil)
 	fileItem := fyne.NewMenuItem("打开图片", func() {
-		openImgFile(w)
+		openImgFile(MainWindow)
 	})
 	fileItem.Icon = theme.FileIcon()
 	dirItem := fyne.NewMenuItem("打开目录", func() {
 		logger.Debug("Menu New->Directory")
-		openFile(w)
+		openFile(MainWindow)
 	})
 	dirItem.Icon = theme.FolderIcon()
 	newItem.ChildMenu = fyne.NewMenu("",
@@ -28,13 +28,13 @@ func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
 	)
 
 	openSettings := func() {
-		w := a.NewWindow("设置")
+		w := MainApp.NewWindow("设置")
 		w.SetContent(settings.NewSettings().LoadAppearanceScreen(w))
 		w.Resize(fyne.NewSize(440, 520))
 		w.Show()
 	}
 	showAbout := func() {
-		w := a.NewWindow("关于")
+		w := MainApp.NewWindow("关于")
 		w.SetContent(widget.NewLabel("MyPicViu\n我的图片查看器，pc软件，查看图片详细信息，显示颜色分布，图像处理等功能，图片文件分类管理，主打支持linux系统的桌面软件。"))
 		w.Show()
 	}
@@ -42,27 +42,27 @@ func MakeMenu(a fyne.App, w fyne.Window) *fyne.MainMenu {
 	settingsItem := fyne.NewMenuItem("设置", openSettings)
 	settingsShortcut := &desktop.CustomShortcut{KeyName: fyne.KeyComma, Modifier: fyne.KeyModifierShortcutDefault}
 	settingsItem.Shortcut = settingsShortcut
-	w.Canvas().AddShortcut(settingsShortcut, func(shortcut fyne.Shortcut) {
+	MainWindow.Canvas().AddShortcut(settingsShortcut, func(shortcut fyne.Shortcut) {
 		openSettings()
 	})
 
 	helpMenu := fyne.NewMenu("帮助",
 		fyne.NewMenuItem("使用文档", func() {
 			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
-			_ = a.OpenURL(u)
+			_ = MainApp.OpenURL(u)
 		}),
 		fyne.NewMenuItem("项目地址", func() {
 			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
-			_ = a.OpenURL(u)
+			_ = MainApp.OpenURL(u)
 		}),
 		fyne.NewMenuItem("新版本", func() {
 			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
-			_ = a.OpenURL(u)
+			_ = MainApp.OpenURL(u)
 		}),
 		fyne.NewMenuItemSeparator(),
 		fyne.NewMenuItem("联系作者", func() {
 			u, _ := url.Parse("https://github.com/mangenotwork/MyPicViu")
-			_ = a.OpenURL(u)
+			_ = MainApp.OpenURL(u)
 		}))
 
 	// a quit item will be appended to our first (File) menu

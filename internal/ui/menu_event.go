@@ -83,6 +83,7 @@ func openImgFile(win fyne.Window) {
 		}
 
 		dataManager.AddRootFileNode(reader.URI().Name(), reader.URI().Path())
+		ShowImg(reader.URI().Path())
 
 	}, win)
 	fd.SetFilter(storage.NewExtensionFileFilter([]string{".png", ".jpg", ".jpeg"}))

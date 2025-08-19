@@ -6,7 +6,6 @@ import (
 	"MyPicViu/internal/db"
 	"MyPicViu/internal/ui"
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/driver/desktop"
 	"fyne.io/fyne/v2/theme"
 	"os"
@@ -22,20 +21,15 @@ func init() {
 
 func main() {
 
-	a := app.NewWithID("MyPicViu.2025.0814")
-
-	makeTray(a)
-	logLifecycle(a)
-	w := a.NewWindow("MyPicViu")
+	makeTray(ui.MainApp)
+	logLifecycle(ui.MainApp)
 
 	icon, _ := fyne.LoadResourceFromPath("./logo.png")
-	w.SetIcon(icon)
-	w.SetMainMenu(ui.MakeMenu(a, w))
-	w.SetMaster()
-
-	w.SetContent(ui.MainContent(w))
-
-	w.Resize(fyne.NewSize(1600, 900))
+	ui.MainWindow.SetIcon(icon)
+	ui.MainWindow.SetMainMenu(ui.MakeMenu())
+	ui.MainWindow.SetMaster()
+	ui.MainWindow.SetContent(ui.MainContent())
+	ui.MainWindow.Resize(fyne.NewSize(1600, 900))
 
 	//w.SetFullScreen(true)
 	// 初始化弹框通知
@@ -44,7 +38,7 @@ func main() {
 	//notice.Segments[2].(*widget.HyperlinkSegment).Alignment = fyne.TextAlignCenter
 	//dialog.ShowCustom("Fyne Demo Moved", "OK", notice, w)
 
-	w.ShowAndRun()
+	ui.MainWindow.ShowAndRun()
 }
 
 func logLifecycle(a fyne.App) {

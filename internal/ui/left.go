@@ -9,7 +9,7 @@ import (
 )
 
 // LeftContainerInit 初始化左边视图
-func LeftContainerInit(w fyne.Window) {
+func LeftContainerInit() {
 	if dataManager.GetNodeMapLen() == 0 {
 		OpenInitContainer.Add(layout.NewSpacer())
 		OpenInitContainer.Add(container.NewCenter(widget.NewLabel("请选择图片文件或含有图片的目录")))
@@ -17,7 +17,7 @@ func LeftContainerInit(w fyne.Window) {
 		openFileBtnContainer.Resize(fyne.NewSize(10, 0))
 		openFileBtn := widget.NewButton("选择图片", func() {
 			logger.Debug("选择图片")
-			openImgFile(w)
+			openImgFile(MainWindow)
 		})
 		openFileBtnContainer.Add(openFileBtn)
 		OpenInitContainer.Add(openFileBtnContainer)
@@ -25,7 +25,7 @@ func LeftContainerInit(w fyne.Window) {
 		openDirBtnContainer.Resize(fyne.NewSize(10, 0))
 		openDirBtn := widget.NewButton("选择目录", func() {
 			logger.Debug("选择图片")
-			openFile(w)
+			openFile(MainWindow)
 		})
 		openDirBtnContainer.Add(openDirBtn)
 		OpenInitContainer.Add(openDirBtnContainer)

@@ -2,26 +2,35 @@ package ui
 
 import (
 	"MyPicViu/common/logger"
-	"MyPicViu/internal/db"
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
+	"log"
 )
 
-var tree *widget.Tree               // 目录树的UI组件
-var dataManager *db.TreeDataManager // 目录树的数据管理
+var MainApp fyne.App
+var MainWindow fyne.Window
+
+var tree *widget.Tree            // 目录树的UI组件
+var dataManager *TreeDataManager // 目录树的数据管理
 
 func InitUI() {
+	MainApp = app.NewWithID("MyPicViu.2025.0814")
+	MainWindow = MainApp.NewWindow("MyPicViu")
 	logger.Debug("初始化UI")
-	tree, dataManager = db.CreateCustomTree(db.TreeData)
+	TreeData = buildTreeData()
+	tree, dataManager = CreateCustomTree()
 	tree.OnSelected = TreeOnSelected()
+	tree.OnBranchOpened = TreeOnBranch()
+	tree.OnBranchClosed = TreeOnBranch()
 }
 
-func MainContent(w fyne.Window) *container.Split {
-	LeftContainerInit(w)
+func MainContent() *container.Split {
+	LeftContainerInit()
 	// 主布局：左右分割
 	mainContent := container.NewHSplit(LeftContainer, MiddleContainer())
 	mainContent.SetOffset(0.2) // 左侧占比20%
@@ -47,6 +56,24 @@ var ImgOperateContainer = container.NewVBox()
 var ImgInfoTextContainer = widget.NewAccordion()
 
 var ImgOperateImgOperateAbilityContainer = container.NewStack()
+
+// 创建弹出菜单
+var popupMenu = fyne.NewMenu("操作",
+	fyne.NewMenuItem("新建", func() {
+		log.Println("执行新建操作")
+		// todo ...
+	}),
+	fyne.NewMenuItemSeparator(), // 分隔线
+	fyne.NewMenuItem("打开", func() {
+		log.Println("执行打开操作")
+		// todo ...
+	}),
+	fyne.NewMenuItemSeparator(), // 分隔线
+	fyne.NewMenuItem("保存", func() {
+		log.Println("执行保存操作")
+		// todo ...
+	}),
+)
 
 // ImgCanvasObject 创建包含图片和控制按钮的内容
 func ImgCanvasObject(img *canvas.Image, scale *float64, originalSize *fyne.Size) fyne.CanvasObject {
