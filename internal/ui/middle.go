@@ -68,13 +68,16 @@ func MiddleContainer() *container.Split {
 	ImgInfoTextScrollContainer := container.NewScroll(ImgInfoTextContainer)
 	ImgInfoTextScrollContainer.SetMinSize(fyne.NewSize(0, 720))
 
-	ImgOperateImgOperateAbilityContainer.Add(layout.NewSpacer())
-	SaturationOperateAbility()
-	SaturationOperateAbility() // todo
-	SaturationOperateAbility() // todo
-	SaturationOperateAbility() // todo
-	SaturationOperateAbility() // todo
-	SaturationOperateAbility() // todo
+	ImgOperateImgOperateAbilityContainer.Append(DirectionOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(ReductionOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(SaturationOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(BrightnessOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(ContrastOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(SharpnessOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(ExposureOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(TemperatureOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(HueOperateAbility())
+	ImgOperateImgOperateAbilityContainer.Append(NoiseOperateAbility())
 
 	ImgOperateAbilityScrollContainer := container.NewVScroll(ImgOperateImgOperateAbilityContainer)
 
@@ -91,12 +94,96 @@ func MiddleContainer() *container.Split {
 	return middleContainer
 }
 
+// DirectionOperateAbility 调整图片方向，镜像，旋转
+func DirectionOperateAbility() *widget.AccordionItem {
+
+	Rotate90ClockwiseBtn := widget.NewButton("旋转90度", func() {
+		logger.Debug("旋转90度")
+		// todo...
+	})
+
+	Rotate180ClockwiseBtn := widget.NewButton("旋转180度", func() {
+		logger.Debug("旋转180度")
+		// todo...
+	})
+
+	Rotate270ClockwiseBtn := widget.NewButton("旋转270度", func() {
+		logger.Debug("旋转270度")
+		// todo...
+	})
+
+	HorizontalMirrorBtn := widget.NewButton("水平镜像", func() {
+		logger.Debug("水平镜像")
+		// todo...
+	})
+
+	VerticalMirrorBtn := widget.NewButton("垂直镜像", func() {
+		logger.Debug("垂直镜像")
+		// todo...
+	})
+
+	item := container.New(layout.NewVBoxLayout())
+	item.Add(Rotate90ClockwiseBtn)
+	item.Add(Rotate180ClockwiseBtn)
+	item.Add(Rotate270ClockwiseBtn)
+	item.Add(HorizontalMirrorBtn)
+	item.Add(VerticalMirrorBtn)
+	item.Add(layout.NewSpacer())
+
+	return &widget.AccordionItem{
+		Title:  "旋转方向,镜像",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// ReductionOperateAbility 压缩图片
+func ReductionOperateAbility() *widget.AccordionItem {
+	width := 900
+	height := 900
+	widthData := binding.BindInt(&width)
+	heightData := binding.BindInt(&height)
+
+	item := container.New(layout.NewVBoxLayout())
+
+	widthEntry := widget.NewEntryWithData(binding.IntToString(widthData))
+	widthEntryContainer := widget.NewForm(widget.NewFormItem("宽度:", widthEntry))
+	item.Add(widthEntryContainer)
+
+	heightEntry := widget.NewEntryWithData(binding.IntToString(heightData))
+	heightEntryContainer := widget.NewForm(widget.NewFormItem("高度:", heightEntry))
+	item.Add(heightEntryContainer)
+
+	ReductionOperateSubmitBtn := widget.NewButton("执行调整", func() {
+		logger.Debug("执行调整")
+		widthVal, err := widthData.Get()
+		if err != nil {
+			logger.Error(err)
+		}
+		logger.Debug("widthVal = ", widthVal)
+		heightVal, err := heightData.Get()
+		if err != nil {
+			logger.Error(err)
+		}
+		logger.Debug("heightVal = ", heightVal)
+		// todo...
+	})
+	item.Add(ReductionOperateSubmitBtn)
+	item.Add(layout.NewSpacer())
+
+	return &widget.AccordionItem{
+		Title:  "缩放",
+		Detail: item,
+		Open:   true,
+	}
+}
+
 // SaturationOperateAbility 调整图片饱和度
-func SaturationOperateAbility() {
+func SaturationOperateAbility() *widget.AccordionItem {
 	// -1.0  1.0
-	value := 0.2
+	value := 0.0
 	data := binding.BindFloat(&value)
-	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "调整饱和度: %0.2f"))
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "饱和度: %0.2f"))
 	entry := widget.NewEntryWithData(binding.FloatToString(data))
 	floats := container.NewGridWithColumns(2, label, entry)
 	slide := widget.NewSliderWithData(-1, 1, data)
@@ -137,5 +224,218 @@ func SaturationOperateAbility() {
 
 	}))
 
-	ImgOperateImgOperateAbilityContainer.Add(item)
+	return &widget.AccordionItem{
+		Title:  "调整饱和度",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// BrightnessOperateAbility 调整图片亮度值
+func BrightnessOperateAbility() *widget.AccordionItem {
+	// -1.0  1.0
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "亮度: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整亮度",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// ContrastOperateAbility 图片对比度值
+func ContrastOperateAbility() *widget.AccordionItem {
+
+	// -1.0  1.0
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "对比度: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整对比度",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// SharpnessOperateAbility 图片锐度值
+func SharpnessOperateAbility() *widget.AccordionItem {
+
+	// -1.0  1.0
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "锐度: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整锐度",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// ExposureOperateAbility 图片曝光度值
+func ExposureOperateAbility() *widget.AccordionItem {
+
+	// -1.0  1.0
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "曝光度: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整曝光度",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// TemperatureOperateAbility 图片色温值
+func TemperatureOperateAbility() *widget.AccordionItem {
+
+	// -1.0  1.0
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "色温: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整色温",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// HueOperateAbility 图片色调值
+func HueOperateAbility() *widget.AccordionItem {
+
+	// -1.0  1.0
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "色调: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整色调",
+		Detail: item,
+		Open:   true,
+	}
+}
+
+// NoiseOperateAbility 图片噪点值
+func NoiseOperateAbility() *widget.AccordionItem {
+
+	// -1.0  1.0s
+	value := 0.0
+	data := binding.BindFloat(&value)
+	label := widget.NewLabelWithData(binding.FloatToStringWithFormat(data, "噪点: %0.2f"))
+	entry := widget.NewEntryWithData(binding.FloatToString(data))
+	floats := container.NewGridWithColumns(2, label, entry)
+	slide := widget.NewSliderWithData(-1, 1, data)
+	slide.Step = 0.01
+	item := container.NewVBox(floats, slide, widget.NewSeparator())
+
+	data.AddListener(binding.NewDataListener(func() {
+		// 获取当前值
+		currentVal, err := data.Get()
+		if err != nil {
+			logger.Error("获取值失败, err = ", err)
+			return // 处理错误（如需要）
+		}
+		logger.Debug("currentVal = ", currentVal)
+	}))
+
+	return &widget.AccordionItem{
+		Title:  "调整噪点",
+		Detail: item,
+		Open:   true,
+	}
 }
