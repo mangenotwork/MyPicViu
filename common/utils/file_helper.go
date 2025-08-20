@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"path/filepath"
+	"strings"
 	"sync"
 )
 
@@ -73,4 +75,45 @@ func IsImgFile(filePath string) bool {
 		}
 	}
 	return false
+}
+
+var suffixMap = map[string]string{
+	"image/png":     "png",
+	"image/jpeg":    "jpg",
+	"image/gif":     "gif",
+	"image/webp":    "webp",
+	"image/bmp":     "bmp",
+	"image/tiff":    "tiff",
+	"image/svg+xml": "svg",
+}
+
+func GetFileSuffix(filePath string) (string, error) {
+	ext, err := DetectByStdLib(filePath)
+	if err != nil {
+		logger.Error("获取文件类型失败: ", err)
+		return "", err
+	}
+	return suffixMap[ext], nil
+}
+
+// ParsePath 解析路径，返回目录、文件名（不含后缀）、完整文件名、后缀
+func ParsePath(fullPath string) (dir, nameWithoutExt, fileName, ext string) {
+	// 1. 提取完整文件名（含后缀）
+	fileName = filepath.Base(fullPath)
+
+	// 2. 提取目录路径
+	dir = filepath.Dir(fullPath)
+
+	// 3. 提取文件后缀（含 "."，如 ".png"）
+	ext = filepath.Ext(fullPath)
+
+	// 4. 提取文件名（不含后缀）
+	if ext != "" {
+		// 从完整文件名中去掉后缀（注意：如果文件名有多个点，只去掉最后一个点及后面的内容）
+		nameWithoutExt = strings.TrimSuffix(fileName, ext)
+	} else {
+		nameWithoutExt = fileName // 无后缀时，文件名即本身
+	}
+
+	return dir, nameWithoutExt, fileName, ext
 }

@@ -2,12 +2,21 @@ package ui
 
 import (
 	"MyPicViu/common/logger"
+	"MyPicViu/common/utils"
 	"MyPicViu/internal/img"
+	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
+	"fyne.io/fyne/v2/data/binding"
+	"fyne.io/fyne/v2/dialog"
+	"fyne.io/fyne/v2/storage"
 	"fyne.io/fyne/v2/widget"
 	"image"
+	"image/jpeg"
+	"image/png"
+	"log"
 	"os"
+	"time"
 )
 
 // 目录树的组件事件
@@ -75,12 +84,82 @@ func TreeOnBranch() func(uid widget.TreeNodeID) {
 //	return l
 //}
 
+var NowImgIsEdit bool = false
+
+func NowImgEdit() {
+	NowImgIsEdit = true
+}
+
+func NowImgEditReset() {
+	NowImgIsEdit = false
+}
+
+var NowImgSuffix string = "png"
+var NowImgPath string = ""
 var NowImgData image.Image
+var NowImgWidth binding.ExternalInt
+var NowImgHeight binding.ExternalInt
+var WidthEntry *widget.Entry
+var HeightEntry *widget.Entry
 
 // ShowImg 打开并显示图片
 func ShowImg(filePath string) {
 
 	logger.Debug("show img")
+
+	if NowImgIsEdit {
+		logger.Debug("当前正常编辑 ", NowImgPath)
+
+		msg := fmt.Sprintf("当前编辑了图片 %s , 是否另保存", NowImgPath)
+
+		editSaveDialog := dialog.NewConfirm(fmt.Sprintf("当前编辑了图片%s", NowImgPath), // 标题
+			msg, // 提示内容
+			func(confirmed bool) { // 回调函数
+				if confirmed {
+					logger.Debug("用户选择：是")
+					saveDialog := dialog.NewFileSave(func(writer fyne.URIWriteCloser, err error) {
+						if err != nil {
+							dialog.ShowError(err, MainWindow)
+							return
+						}
+						if writer == nil {
+							log.Println("Cancelled")
+							return
+						}
+
+						fileSaved(writer, MainWindow)
+
+						NowImgEditReset()
+
+					}, MainWindow)
+
+					dir, nameWithoutExt, _, ext := utils.ParsePath(NowImgPath)
+					saveDialog.SetTitleText("另存图片")
+
+					if uri, err := storage.ParseURI(dir); err == nil {
+						// 获取目录URI
+						dirURI, _ := storage.ListerForURI(uri)
+						if dirURI != nil {
+							saveDialog.SetLocation(dirURI) // 设置默认打开的目录
+						}
+					}
+
+					saveDialog.SetFileName(fmt.Sprintf("%s_%s%s", nameWithoutExt, time.Now().Format(utils.TimeNumberTemplate), ext))
+					saveDialog.Show()
+
+				} else {
+					logger.Debug("用户选择：否")
+					// 执行取消逻辑
+					NowImgEditReset()
+					ShowImg(filePath)
+				}
+			},
+			MainWindow, // 父窗口（必填参数）
+		)
+		editSaveDialog.Resize(fyne.NewSize(300, 150))
+		editSaveDialog.Show()
+		return
+	}
 
 	// 解码图片
 	reader, err := os.Open(filePath)
@@ -93,11 +172,22 @@ func ShowImg(filePath string) {
 		_ = reader.Close()
 	}()
 
+	NowImgPath = filePath
+	suffix, err := utils.GetFileSuffix(filePath)
+	if err == nil {
+		NowImgSuffix = suffix
+	}
 	NowImgData, _, err = image.Decode(reader)
 	if err != nil {
 		logger.Error("读取图片文件失败", err)
 		return
 	}
+	width := NowImgData.Bounds().Dx()
+	NowImgWidth = binding.BindInt(&width)
+	height := NowImgData.Bounds().Dy()
+	NowImgHeight = binding.BindInt(&height)
+
+	ReductionOperateAbility()
 
 	// 创建Fyne图片对象
 	imgObj := canvas.NewImageFromImage(NowImgData)
@@ -172,4 +262,33 @@ func ShowImg(filePath string) {
 
 	}()
 
+}
+
+func fileSaved(f fyne.URIWriteCloser, w fyne.Window) {
+	defer f.Close()
+
+	if NowImgData == nil {
+		dialog.ShowError(fmt.Errorf("没有可保存的图片数据"), w)
+		return
+	}
+
+	var err error
+
+	switch NowImgSuffix {
+	case "png":
+		// 保存  NowImgData 为png
+		err = png.Encode(f, NowImgData)
+	case "jpg":
+		// 保存  NowImgData 为jpeg
+		err = jpeg.Encode(f, NowImgData, &jpeg.Options{Quality: 90})
+	}
+
+	// 处理编码错误
+	if err != nil {
+		dialog.ShowError(fmt.Errorf("保存图片失败: %v", err), w)
+		return
+	}
+
+	dialog.ShowInformation("保存成功", fmt.Sprintf("图片已保存至:\n%s", f.URI()), w)
+	log.Println("Saved to...", f.URI())
 }

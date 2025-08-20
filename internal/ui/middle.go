@@ -69,7 +69,12 @@ func MiddleContainer() *container.Split {
 	ImgInfoTextScrollContainer.SetMinSize(fyne.NewSize(0, 720))
 
 	ImgOperateImgOperateAbilityContainer.Append(DirectionOperateAbility())
-	ImgOperateImgOperateAbilityContainer.Append(ReductionOperateAbility())
+	ReductionOperateAbility()
+	ImgOperateImgOperateAbilityContainer.Append(&widget.AccordionItem{
+		Title:  "缩放",
+		Detail: ReductionOperateAbilityContainer,
+		Open:   true,
+	})
 	ImgOperateImgOperateAbilityContainer.Append(SaturationOperateAbility())
 	ImgOperateImgOperateAbilityContainer.Append(BrightnessOperateAbility())
 	ImgOperateImgOperateAbilityContainer.Append(ContrastOperateAbility())
@@ -99,27 +104,122 @@ func DirectionOperateAbility() *widget.AccordionItem {
 
 	Rotate90ClockwiseBtn := widget.NewButton("旋转90度", func() {
 		logger.Debug("旋转90度")
-		// todo...
+		if NowImgData != nil {
+			NowImgEdit()
+			NowImgData = img.Rotate90Clockwise(NowImgData)
+			imgObj := canvas.NewImageFromImage(NowImgData)
+			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
+			dx := ImgViewContainer.Size().Width
+			originalSize := fyne.NewSize(
+				dx,
+				700,
+			)
+			// 重置缩放
+			imgObj.SetMinSize(originalSize)
+			scale := 1.0
+			ImgViewContainer.RemoveAll()
+			background := canvas.NewRasterWithPixels(checkerPattern)
+			background.SetMinSize(fyne.NewSize(280, 280))
+			ImgViewContainer.Add(background)
+			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
+			ImgViewContainer.Refresh()
+		}
 	})
 
 	Rotate180ClockwiseBtn := widget.NewButton("旋转180度", func() {
 		logger.Debug("旋转180度")
-		// todo...
+		if NowImgData != nil {
+			NowImgEdit()
+			NowImgData = img.Rotate180Clockwise(NowImgData)
+			imgObj := canvas.NewImageFromImage(NowImgData)
+			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
+			dx := ImgViewContainer.Size().Width
+			originalSize := fyne.NewSize(
+				dx,
+				700,
+			)
+			// 重置缩放
+			imgObj.SetMinSize(originalSize)
+			scale := 1.0
+			ImgViewContainer.RemoveAll()
+			background := canvas.NewRasterWithPixels(checkerPattern)
+			background.SetMinSize(fyne.NewSize(280, 280))
+			ImgViewContainer.Add(background)
+			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
+			ImgViewContainer.Refresh()
+		}
 	})
 
 	Rotate270ClockwiseBtn := widget.NewButton("旋转270度", func() {
 		logger.Debug("旋转270度")
-		// todo...
+		if NowImgData != nil {
+			NowImgEdit()
+			NowImgData = img.Rotate270Clockwise(NowImgData)
+			imgObj := canvas.NewImageFromImage(NowImgData)
+			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
+			dx := ImgViewContainer.Size().Width
+			originalSize := fyne.NewSize(
+				dx,
+				700,
+			)
+			// 重置缩放
+			imgObj.SetMinSize(originalSize)
+			scale := 1.0
+			ImgViewContainer.RemoveAll()
+			background := canvas.NewRasterWithPixels(checkerPattern)
+			background.SetMinSize(fyne.NewSize(280, 280))
+			ImgViewContainer.Add(background)
+			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
+			ImgViewContainer.Refresh()
+		}
 	})
 
 	HorizontalMirrorBtn := widget.NewButton("水平镜像", func() {
 		logger.Debug("水平镜像")
-		// todo...
+		if NowImgData != nil {
+			NowImgEdit()
+			NowImgData = img.HorizontalMirror(NowImgData)
+			imgObj := canvas.NewImageFromImage(NowImgData)
+			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
+			dx := ImgViewContainer.Size().Width
+			originalSize := fyne.NewSize(
+				dx,
+				700,
+			)
+			// 重置缩放
+			imgObj.SetMinSize(originalSize)
+			scale := 1.0
+			ImgViewContainer.RemoveAll()
+			background := canvas.NewRasterWithPixels(checkerPattern)
+			background.SetMinSize(fyne.NewSize(280, 280))
+			ImgViewContainer.Add(background)
+			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
+			ImgViewContainer.Refresh()
+		}
 	})
 
 	VerticalMirrorBtn := widget.NewButton("垂直镜像", func() {
 		logger.Debug("垂直镜像")
-		// todo...
+		if NowImgData != nil {
+			NowImgEdit()
+			NowImgData = img.VerticalMirror(NowImgData)
+			imgObj := canvas.NewImageFromImage(NowImgData)
+			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
+			dx := ImgViewContainer.Size().Width
+			originalSize := fyne.NewSize(
+				dx,
+				700,
+			)
+			// 重置缩放
+			imgObj.SetMinSize(originalSize)
+			scale := 1.0
+			ImgViewContainer.RemoveAll()
+			background := canvas.NewRasterWithPixels(checkerPattern)
+			background.SetMinSize(fyne.NewSize(280, 280))
+			ImgViewContainer.Add(background)
+			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
+			ImgViewContainer.Refresh()
+		}
 	})
 
 	item := container.New(layout.NewVBoxLayout())
@@ -137,45 +237,54 @@ func DirectionOperateAbility() *widget.AccordionItem {
 	}
 }
 
-// ReductionOperateAbility 压缩图片
-func ReductionOperateAbility() *widget.AccordionItem {
-	width := 900
-	height := 900
-	widthData := binding.BindInt(&width)
-	heightData := binding.BindInt(&height)
+var ReductionOperateAbilityContainer = container.New(layout.NewVBoxLayout())
 
-	item := container.New(layout.NewVBoxLayout())
+// ReductionOperateAbility 缩放图片
+func ReductionOperateAbility() {
+	ReductionOperateAbilityContainer.RemoveAll()
+	WidthEntry = widget.NewEntryWithData(binding.IntToString(NowImgWidth))
+	widthEntryContainer := widget.NewForm(widget.NewFormItem("宽度:", WidthEntry))
+	ReductionOperateAbilityContainer.Add(widthEntryContainer)
 
-	widthEntry := widget.NewEntryWithData(binding.IntToString(widthData))
-	widthEntryContainer := widget.NewForm(widget.NewFormItem("宽度:", widthEntry))
-	item.Add(widthEntryContainer)
-
-	heightEntry := widget.NewEntryWithData(binding.IntToString(heightData))
-	heightEntryContainer := widget.NewForm(widget.NewFormItem("高度:", heightEntry))
-	item.Add(heightEntryContainer)
+	HeightEntry = widget.NewEntryWithData(binding.IntToString(NowImgHeight))
+	heightEntryContainer := widget.NewForm(widget.NewFormItem("高度:", HeightEntry))
+	ReductionOperateAbilityContainer.Add(heightEntryContainer)
 
 	ReductionOperateSubmitBtn := widget.NewButton("执行调整", func() {
 		logger.Debug("执行调整")
-		widthVal, err := widthData.Get()
+		widthVal, err := NowImgWidth.Get()
 		if err != nil {
 			logger.Error(err)
 		}
 		logger.Debug("widthVal = ", widthVal)
-		heightVal, err := heightData.Get()
+		heightVal, err := NowImgHeight.Get()
 		if err != nil {
 			logger.Error(err)
 		}
 		logger.Debug("heightVal = ", heightVal)
-		// todo...
-	})
-	item.Add(ReductionOperateSubmitBtn)
-	item.Add(layout.NewSpacer())
 
-	return &widget.AccordionItem{
-		Title:  "缩放",
-		Detail: item,
-		Open:   true,
-	}
+		if NowImgData != nil {
+			NowImgEdit()
+			NowImgData = img.DrawCatmullRom(NowImgData, widthVal, heightVal)
+			imgObj := canvas.NewImageFromImage(NowImgData)
+			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
+			dx := ImgViewContainer.Size().Width
+			originalSize := fyne.NewSize(dx, 700)
+			// 重置缩放
+			imgObj.SetMinSize(originalSize)
+			scale := 1.0
+			ImgViewContainer.RemoveAll()
+			background := canvas.NewRasterWithPixels(checkerPattern)
+			background.SetMinSize(fyne.NewSize(280, 280))
+			ImgViewContainer.Add(background)
+			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
+			ImgViewContainer.Refresh()
+		}
+
+	})
+	ReductionOperateAbilityContainer.Add(ReductionOperateSubmitBtn)
+	ReductionOperateAbilityContainer.Add(layout.NewSpacer())
+	ReductionOperateAbilityContainer.Refresh()
 }
 
 // SaturationOperateAbility 调整图片饱和度

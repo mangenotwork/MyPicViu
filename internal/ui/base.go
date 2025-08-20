@@ -6,6 +6,7 @@ import (
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/data/binding"
 	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
@@ -27,6 +28,9 @@ func InitUI() {
 	tree.OnSelected = TreeOnSelected()
 	tree.OnBranchOpened = TreeOnBranch()
 	tree.OnBranchClosed = TreeOnBranch()
+	w, h := 0, 0
+	NowImgWidth = binding.BindInt(&w)
+	NowImgHeight = binding.BindInt(&h)
 }
 
 func MainContent() *container.Split {
