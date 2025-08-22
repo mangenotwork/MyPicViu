@@ -1,8 +1,10 @@
 package img
 
 import (
+	"MyPicViu/common/utils"
 	"fmt"
 	"image"
+	"image/color"
 	"math"
 )
 
@@ -86,4 +88,44 @@ func calculateImageContrast(imgData image.Image) (float64, error) {
 	contrast := stdDev / mean // 变异系数作为对比度度量
 
 	return contrast, nil
+}
+
+func SetImageContrast(imgData image.Image, value float64) image.Image {
+	bounds := imgData.Bounds()
+	result := image.NewRGBA(bounds)
+
+	// 将 -1.0~1.0 转换为对比度因子（映射到 0~255 等效范围）
+	// value=0 时保持原图；value=1 时最大对比度；value=-1 时最小对比度（灰度）
+	adjustedValue := value * 255 // 转换为 -255~255 范围
+	factor := (259 * (adjustedValue + 255)) / (255 * (259 - adjustedValue))
+
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+
+			// 正确转换为 0-255 范围（位运算更高效）
+			r8 := int(r >> 8)
+			g8 := int(g >> 8)
+			b8 := int(b >> 8)
+			a8 := uint8(a >> 8) // alpha 通道单独处理
+
+			// 对比度调整公式：factor*(色值-128) + 128
+			newR := int(factor*(float64(r8)-128) + 128)
+			newG := int(factor*(float64(g8)-128) + 128)
+			newB := int(factor*(float64(b8)-128) + 128)
+
+			// 钳位到 0-255 范围（使用工具函数更简洁）
+			newR = utils.Clamp(newR, 0, 255)
+			newG = utils.Clamp(newG, 0, 255)
+			newB = utils.Clamp(newB, 0, 255)
+
+			result.Set(x, y, color.RGBA{
+				uint8(newR),
+				uint8(newG),
+				uint8(newB),
+				a8,
+			})
+		}
+	}
+	return result
 }

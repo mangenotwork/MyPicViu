@@ -1,8 +1,10 @@
 package img
 
 import (
+	"MyPicViu/common/utils"
 	"fmt"
 	"image"
+	"image/color"
 	"math"
 )
 
@@ -93,4 +95,32 @@ func calculateImageColorTemperature(imgData image.Image) (float64, error) {
 	}
 
 	return temperature, nil
+}
+
+func SetImageTemperature(imgData image.Image, value float64) image.Image {
+	// value范围：-1.0（最暖）~1.0（最冷）
+	bounds := imgData.Bounds()
+	result := image.NewRGBA(bounds)
+
+	// 计算通道偏移量（基于value动态调整）
+	redOffset := int(-value * 50) // 冷色时减少红，暖色时增加红
+	blueOffset := int(value * 50) // 冷色时增加蓝，暖色时减少蓝
+
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+			r8 := int(r >> 8)
+			g8 := int(g >> 8)
+			b8 := int(b >> 8)
+			a8 := uint8(a >> 8)
+
+			// 调整RGB通道（暖色调增强红/绿，冷色调增强蓝）
+			newR := utils.Clamp(r8+redOffset, 0, 255)
+			newG := utils.Clamp(g8+int(-value*20), 0, 255) // 轻微调整绿色辅助冷暖感
+			newB := utils.Clamp(b8+blueOffset, 0, 255)
+
+			result.Set(x, y, color.RGBA{uint8(newR), uint8(newG), uint8(newB), a8})
+		}
+	}
+	return result
 }

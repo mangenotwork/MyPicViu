@@ -3,6 +3,7 @@ package img
 import (
 	"fmt"
 	"image"
+	"image/color"
 	"math"
 )
 
@@ -189,4 +190,40 @@ func calculateImageHue(imgData image.Image) (float64, string, error) {
 	}
 
 	return averageHue, mainCategory, nil
+}
+
+func SetImageHue(imgData image.Image, value float64) image.Image {
+	bounds := imgData.Bounds()
+	result := image.NewRGBA(bounds)
+
+	// 将 -1.0~1.0 映射为色相角度偏移（-180~180度）
+	// value=1.0 表示顺时针旋转180度，value=-1.0表示逆时针旋转180度
+	hueOffset := value * 180
+
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+
+			// 正确转换为 0-255 范围（位运算更高效）
+			r8 := uint8(r >> 8)
+			g8 := uint8(g >> 8)
+			b8 := uint8(b >> 8)
+			a8 := uint8(a >> 8) // alpha通道单独处理
+
+			// 转换为HSV色彩空间
+			h, s, v := RGBToHSV(r8, g8, b8)
+
+			// 调整色调（叠加偏移后取模，确保在0-360度范围）
+			h = math.Mod(h+hueOffset, 360)
+			if h < 0 {
+				h += 360 // 处理负数情况（如hueOffset=-200，h=100时，结果应为160）
+			}
+
+			// 转换回RGB色彩空间
+			r1, g1, b1 := HSVToRGB(h, s, v)
+
+			result.Set(x, y, color.RGBA{r1, g1, b1, a8})
+		}
+	}
+	return result
 }

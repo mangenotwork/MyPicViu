@@ -2,7 +2,6 @@ package ui
 
 import (
 	"MyPicViu/common/logger"
-	"MyPicViu/internal/img"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
@@ -109,120 +108,35 @@ func DirectionOperateAbility() *widget.AccordionItem {
 	Rotate90ClockwiseBtn := widget.NewButton("旋转90度", func() {
 		logger.Debug("旋转90度")
 		if NowImgData != nil {
-			NowImgEdit()
-			NowImgData = img.Rotate90Clockwise(NowImgData)
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(
-				dx,
-				700,
-			)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
+			NewImgLayerDirection(90)
 		}
 	})
 
 	Rotate180ClockwiseBtn := widget.NewButton("旋转180度", func() {
 		logger.Debug("旋转180度")
 		if NowImgData != nil {
-			NowImgEdit()
-			NowImgData = img.Rotate180Clockwise(NowImgData)
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(
-				dx,
-				700,
-			)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
+			NewImgLayerDirection(180)
 		}
 	})
 
 	Rotate270ClockwiseBtn := widget.NewButton("旋转270度", func() {
 		logger.Debug("旋转270度")
 		if NowImgData != nil {
-			NowImgEdit()
-			NowImgData = img.Rotate270Clockwise(NowImgData)
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(
-				dx,
-				700,
-			)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
+			NewImgLayerDirection(270)
 		}
 	})
 
 	HorizontalMirrorBtn := widget.NewButton("水平镜像", func() {
 		logger.Debug("水平镜像")
 		if NowImgData != nil {
-			NowImgEdit()
-			NowImgData = img.HorizontalMirror(NowImgData)
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(
-				dx,
-				700,
-			)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
+			NewImgLayerHorizontalMirror()
 		}
 	})
 
 	VerticalMirrorBtn := widget.NewButton("垂直镜像", func() {
 		logger.Debug("垂直镜像")
 		if NowImgData != nil {
-			NowImgEdit()
-			NowImgData = img.VerticalMirror(NowImgData)
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(
-				dx,
-				700,
-			)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
+			NewImgLayerVerticalMirror()
 		}
 	})
 
@@ -268,23 +182,8 @@ func ReductionOperateAbility() {
 		logger.Debug("heightVal = ", heightVal)
 
 		if NowImgData != nil {
-			NowImgEdit()
-			NowImgData = img.DrawCatmullRom(NowImgData, widthVal, heightVal)
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(dx, 700)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
+			NewImgLayerReduction(widthVal, heightVal)
 		}
-
 	})
 	ReductionOperateAbilityContainer.Add(ReductionOperateSubmitBtn)
 	ReductionOperateAbilityContainer.Add(layout.NewSpacer())
@@ -314,27 +213,8 @@ func SaturationOperateAbility() *widget.AccordionItem {
 		// 在这里添加值变化后的操作（例如更新图像饱和度）
 		logger.Debug("值的变化 ： ", currentVal)
 		if NowImgData != nil {
-			NowImgData = img.SetImageSaturation(NowImgData, currentVal)
-
-			imgObj := canvas.NewImageFromImage(NowImgData)
-			imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
-			dx := ImgViewContainer.Size().Width
-			originalSize := fyne.NewSize(
-				dx,
-				700,
-			)
-			// 重置缩放
-			imgObj.SetMinSize(originalSize)
-			scale := 1.0
-			ImgViewContainer.RemoveAll()
-			background := canvas.NewRasterWithPixels(checkerPattern)
-			background.SetMinSize(fyne.NewSize(280, 280))
-			ImgViewContainer.Add(background)
-			ImgViewContainer.Add(ImgCanvasObject(imgObj, &scale, &originalSize))
-			ImgViewContainer.Refresh()
-
+			NewImgLayerSaturation(currentVal)
 		}
-
 	}))
 
 	return &widget.AccordionItem{
@@ -364,6 +244,9 @@ func BrightnessOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerBrightness(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{
@@ -394,6 +277,9 @@ func ContrastOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerContrast(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{
@@ -424,6 +310,9 @@ func SharpnessOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerSharpness(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{
@@ -454,6 +343,9 @@ func ExposureOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerExposure(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{
@@ -484,6 +376,9 @@ func TemperatureOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerTemperature(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{
@@ -514,6 +409,9 @@ func HueOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerHue(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{
@@ -544,6 +442,9 @@ func NoiseOperateAbility() *widget.AccordionItem {
 			return // 处理错误（如需要）
 		}
 		logger.Debug("currentVal = ", currentVal)
+		if NowImgData != nil {
+			NewImgLayerNoise(currentVal)
+		}
 	}))
 
 	return &widget.AccordionItem{

@@ -1,8 +1,11 @@
 package img
 
 import (
+	"MyPicViu/common/logger"
+	"MyPicViu/common/utils"
 	"fmt"
 	"image"
+	"image/color"
 )
 
 // 图片亮度
@@ -59,4 +62,42 @@ func calculateImageBrightness(imgData image.Image) (float64, error) {
 	// 返回平均亮度
 	averageBrightness := totalBrightness / float64(totalPixels)
 	return averageBrightness, nil
+}
+
+func SetImageBrightness(imgData image.Image, value float64) image.Image {
+	logger.Debug("调整亮度 value = ", value)
+	bounds := imgData.Bounds()
+	result := image.NewRGBA(bounds)
+
+	// 转换百分比为绝对亮度增量（-255到255）
+	delta := int(value * 255)
+
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+
+			// 转换为0-255范围
+			r8 := int(r >> 8)
+			g8 := int(g >> 8)
+			b8 := int(b >> 8)
+
+			// 加法调整（保持色彩比例）
+			newR := r8 + delta
+			newG := g8 + delta
+			newB := b8 + delta
+
+			// 钳位到有效范围
+			newR = utils.Clamp(newR, 0, 255)
+			newG = utils.Clamp(newG, 0, 255)
+			newB = utils.Clamp(newB, 0, 255)
+
+			result.Set(x, y, color.RGBA{
+				uint8(newR),
+				uint8(newG),
+				uint8(newB),
+				uint8(a >> 8),
+			})
+		}
+	}
+	return result
 }

@@ -3,6 +3,7 @@ package img
 import (
 	"fmt"
 	"image"
+	"image/color"
 	"math"
 )
 
@@ -80,4 +81,81 @@ func calculateImageSharpness(imgData image.Image) (float64, error) {
 	// 计算平均边缘强度作为锐度度量
 	averageSharpness := totalEdgeStrength / float64(edgeCount)
 	return averageSharpness, nil
+}
+
+func SetImageSharpness(imgData image.Image, value float64) image.Image {
+	// 拉普拉斯算子
+	var laplacianKernel = [][]int{
+		{0, -1, 0},
+		{-1, 4, -1},
+		{0, -1, 0},
+	}
+
+	bounds := imgData.Bounds()
+	width := bounds.Dx()
+	height := bounds.Dy()
+	result := image.NewRGBA(bounds)
+
+	for y := 1; y < height-1; y++ {
+		for x := 1; x < width-1; x++ {
+			var rSum, gSum, bSum int
+
+			// 应用拉普拉斯算子
+			for ky := -1; ky <= 1; ky++ {
+				for kx := -1; kx <= 1; kx++ {
+					r, g, b, _ := imgData.At(x+kx, y+ky).RGBA()
+					r = r / 256
+					g = g / 256
+					b = b / 256
+
+					kernelValue := laplacianKernel[ky+1][kx+1]
+					rSum += int(r) * kernelValue
+					gSum += int(g) * kernelValue
+					bSum += int(b) * kernelValue
+				}
+			}
+
+			// 获取当前像素的原始值
+			r, g, b, a := imgData.At(x, y).RGBA()
+			r = r / 256
+			g = g / 256
+			b = b / 256
+
+			// 调整锐度
+			newR := int(r) + int(float64(rSum)*value)
+			newG := int(g) + int(float64(gSum)*value)
+			newB := int(b) + int(float64(bSum)*value)
+
+			// 确保颜色值在 0 到 255 范围内
+			if newR < 0 {
+				newR = 0
+			} else if newR > 255 {
+				newR = 255
+			}
+			if newG < 0 {
+				newG = 0
+			} else if newG > 255 {
+				newG = 255
+			}
+			if newB < 0 {
+				newB = 0
+			} else if newB > 255 {
+				newB = 255
+			}
+
+			result.Set(x, y, color.RGBA{uint8(newR), uint8(newG), uint8(newB), uint8(a)})
+		}
+	}
+
+	// 处理边缘像素，简单复制原始像素值
+	for y := 0; y < height; y++ {
+		result.Set(0, y, imgData.At(0, y))
+		result.Set(width-1, y, imgData.At(width-1, y))
+	}
+	for x := 0; x < width; x++ {
+		result.Set(x, 0, imgData.At(x, 0))
+		result.Set(x, height-1, imgData.At(x, height-1))
+	}
+
+	return result
 }

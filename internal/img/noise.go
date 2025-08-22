@@ -1,9 +1,13 @@
 package img
 
 import (
+	"MyPicViu/common/utils"
 	"fmt"
 	"image"
+	"image/color"
 	"math"
+	"math/rand"
+	"time"
 )
 
 // 图片噪点值
@@ -86,4 +90,69 @@ func calculateImageNoise(imgData image.Image) (float64, error) {
 	// 计算平均噪点值
 	averageNoise := totalNoise / float64(noiseCount)
 	return averageNoise, nil
+}
+
+func SetImageNoise(imgData image.Image, value float64) image.Image {
+	bounds := imgData.Bounds()
+	width, height := bounds.Max.X, bounds.Max.Y
+	result := image.NewRGBA(bounds)
+	rand.Seed(time.Now().UnixNano()) // 初始化随机数种子
+
+	// 将value映射为噪点强度（0~100），负值用于降噪
+	noiseIntensity := int(math.Abs(value) * 100)
+	isReduceNoise := value < 0
+
+	for y := 0; y < height; y++ {
+		for x := 0; x < width; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+			r8 := uint8(r >> 8)
+			g8 := uint8(g >> 8)
+			b8 := uint8(b >> 8)
+			a8 := uint8(a >> 8)
+
+			if isReduceNoise {
+				// 降噪：使用3x3邻域均值模糊（简单降噪）
+				r8, g8, b8 = reduceNoise(imgData, x, y, bounds, noiseIntensity)
+			} else {
+				// 添加噪点：基于强度生成随机噪点并叠加
+				noise := rand.Intn(noiseIntensity*2+1) - noiseIntensity // -强度 ~ +强度
+				r8 = uint8(utils.Clamp(int(r8)+noise, 0, 255))
+				g8 = uint8(utils.Clamp(int(g8)+noise, 0, 255))
+				b8 = uint8(utils.Clamp(int(b8)+noise, 0, 255))
+			}
+
+			result.Set(x, y, color.RGBA{r8, g8, b8, a8})
+		}
+	}
+	return result
+}
+
+// 辅助函数：简单均值降噪
+func reduceNoise(img image.Image, x, y int, bounds image.Rectangle, intensity int) (uint8, uint8, uint8) {
+	// 根据强度调整模糊半径（强度越高，半径越大，降噪越强）
+	radius := 1 + intensity/30 // 最大半径约4（当intensity=100时）
+	if radius < 1 {
+		radius = 1
+	}
+
+	var rSum, gSum, bSum int
+	count := 0
+
+	// 遍历3x3邻域像素
+	for dy := -radius; dy <= radius; dy++ {
+		for dx := -radius; dx <= radius; dx++ {
+			nx, ny := x+dx, y+dy
+			// 检查是否在图像范围内
+			if nx >= bounds.Min.X && nx < bounds.Max.X && ny >= bounds.Min.Y && ny < bounds.Max.Y {
+				r, g, b, _ := img.At(nx, ny).RGBA()
+				rSum += int(r >> 8)
+				gSum += int(g >> 8)
+				bSum += int(b >> 8)
+				count++
+			}
+		}
+	}
+
+	// 计算均值
+	return uint8(rSum / count), uint8(gSum / count), uint8(bSum / count)
 }

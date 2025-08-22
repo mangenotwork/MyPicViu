@@ -98,6 +98,7 @@ func NowImgEdit() {
 
 func NowImgEditReset() {
 	NowImgIsEdit = false
+	NewImgLayerReset()
 	ImgEditSaveButton.RemoveAll()
 	ImgEditSaveButton.Refresh()
 }
@@ -109,6 +110,14 @@ var NowImgWidth binding.ExternalInt
 var NowImgHeight binding.ExternalInt
 var WidthEntry *widget.Entry
 var HeightEntry *widget.Entry
+
+func ImgOriginalSize() fyne.Size {
+	dx := ImgViewContainer.Size().Width
+	return fyne.NewSize(
+		dx,
+		700,
+	)
+}
 
 // ShowImg 打开并显示图片
 func ShowImg(filePath string) {
@@ -173,8 +182,6 @@ func ShowImg(filePath string) {
 	imgObj := canvas.NewImageFromImage(NowImgData)
 	imgObj.FillMode = canvas.ImageFillContain // 保持比例显示
 
-	dx := ImgViewContainer.Size().Width
-
 	// todo 计算图片的适合位置，不要拉伸图
 	//dy := imgView2Container.Size().Height
 	//
@@ -191,11 +198,7 @@ func ShowImg(filePath string) {
 	//	dy = 700
 	//}
 
-	originalSize := fyne.NewSize(
-		dx,
-		700,
-	)
-
+	originalSize := ImgOriginalSize()
 	// 重置缩放
 	imgObj.SetMinSize(originalSize)
 	scale := 1.0
@@ -247,7 +250,7 @@ func ShowImg(filePath string) {
 func fileSaved(f fyne.URIWriteCloser, w fyne.Window) {
 	defer f.Close()
 
-	if NowImgData == nil {
+	if showImgData == nil {
 		dialog.ShowError(fmt.Errorf("没有可保存的图片数据"), w)
 		return
 	}
@@ -257,10 +260,10 @@ func fileSaved(f fyne.URIWriteCloser, w fyne.Window) {
 	switch NowImgSuffix {
 	case "png":
 		// 保存  NowImgData 为png
-		err = png.Encode(f, NowImgData)
+		err = png.Encode(f, showImgData)
 	case "jpg":
 		// 保存  NowImgData 为jpeg
-		err = jpeg.Encode(f, NowImgData, &jpeg.Options{Quality: 90})
+		err = jpeg.Encode(f, showImgData, &jpeg.Options{Quality: 90})
 	}
 
 	// 处理编码错误

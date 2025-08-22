@@ -3,6 +3,8 @@ package img
 import (
 	"fmt"
 	"image"
+	"image/color"
+	"math"
 )
 
 // 图片曝光度
@@ -79,4 +81,25 @@ func calculateImageExposure(imgData image.Image) (ExposureResult, error) {
 		AverageLuminance:  averageLuminance,
 		ExposureRating:    exposureRating,
 	}, nil
+}
+
+func SetImageExposure(imgData image.Image, value float64) image.Image {
+	bounds := imgData.Bounds()
+	result := image.NewRGBA(bounds)
+	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
+		for x := bounds.Min.X; x < bounds.Max.X; x++ {
+			r, g, b, a := imgData.At(x, y).RGBA()
+			r = r / 256
+			g = g / 256
+			b = b / 256
+
+			// 调整曝光度
+			newR := int(math.Min(255, math.Max(0, float64(r)*math.Pow(2, value))))
+			newG := int(math.Min(255, math.Max(0, float64(g)*math.Pow(2, value))))
+			newB := int(math.Min(255, math.Max(0, float64(b)*math.Pow(2, value))))
+
+			result.Set(x, y, color.RGBA{uint8(newR), uint8(newG), uint8(newB), uint8(a)})
+		}
+	}
+	return result
 }
