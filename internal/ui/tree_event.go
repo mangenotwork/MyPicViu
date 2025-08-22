@@ -88,10 +88,18 @@ var NowImgIsEdit bool = false
 
 func NowImgEdit() {
 	NowImgIsEdit = true
+	ImgEditSaveButton.RemoveAll()
+	ImgEditSaveButton.Add(widget.NewButton("保存", func() {
+		logger.Debug("保存")
+		SaveImgShow()
+	}))
+	ImgEditSaveButton.Refresh()
 }
 
 func NowImgEditReset() {
 	NowImgIsEdit = false
+	ImgEditSaveButton.RemoveAll()
+	ImgEditSaveButton.Refresh()
 }
 
 var NowImgSuffix string = "png"
@@ -117,35 +125,7 @@ func ShowImg(filePath string) {
 			func(confirmed bool) { // 回调函数
 				if confirmed {
 					logger.Debug("用户选择：是")
-					saveDialog := dialog.NewFileSave(func(writer fyne.URIWriteCloser, err error) {
-						if err != nil {
-							dialog.ShowError(err, MainWindow)
-							return
-						}
-						if writer == nil {
-							log.Println("Cancelled")
-							return
-						}
-
-						fileSaved(writer, MainWindow)
-
-						NowImgEditReset()
-
-					}, MainWindow)
-
-					dir, nameWithoutExt, _, ext := utils.ParsePath(NowImgPath)
-					saveDialog.SetTitleText("另存图片")
-
-					if uri, err := storage.ParseURI(dir); err == nil {
-						// 获取目录URI
-						dirURI, _ := storage.ListerForURI(uri)
-						if dirURI != nil {
-							saveDialog.SetLocation(dirURI) // 设置默认打开的目录
-						}
-					}
-
-					saveDialog.SetFileName(fmt.Sprintf("%s_%s%s", nameWithoutExt, time.Now().Format(utils.TimeNumberTemplate), ext))
-					saveDialog.Show()
+					SaveImgShow()
 
 				} else {
 					logger.Debug("用户选择：否")
@@ -291,4 +271,36 @@ func fileSaved(f fyne.URIWriteCloser, w fyne.Window) {
 
 	dialog.ShowInformation("保存成功", fmt.Sprintf("图片已保存至:\n%s", f.URI()), w)
 	log.Println("Saved to...", f.URI())
+}
+
+func SaveImgShow() {
+	saveDialog := dialog.NewFileSave(func(writer fyne.URIWriteCloser, err error) {
+		if err != nil {
+			dialog.ShowError(err, MainWindow)
+			return
+		}
+		if writer == nil {
+			log.Println("Cancelled")
+			return
+		}
+
+		fileSaved(writer, MainWindow)
+
+		NowImgEditReset()
+
+	}, MainWindow)
+
+	dir, nameWithoutExt, _, ext := utils.ParsePath(NowImgPath)
+	saveDialog.SetTitleText("另存图片")
+
+	if uri, err := storage.ParseURI(dir); err == nil {
+		// 获取目录URI
+		dirURI, _ := storage.ListerForURI(uri)
+		if dirURI != nil {
+			saveDialog.SetLocation(dirURI) // 设置默认打开的目录
+		}
+	}
+
+	saveDialog.SetFileName(fmt.Sprintf("%s_%s%s", nameWithoutExt, time.Now().Format(utils.TimeNumberTemplate), ext))
+	saveDialog.Show()
 }

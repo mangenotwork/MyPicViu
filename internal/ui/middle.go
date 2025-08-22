@@ -63,10 +63,11 @@ func MiddleContainer() *container.Split {
 	})
 	ImgInfoTextContainer.MultiOpen = true
 
-	//ac.Resize(fyne.NewSize(260, 760))
-
 	ImgInfoTextScrollContainer := container.NewScroll(ImgInfoTextContainer)
-	ImgInfoTextScrollContainer.SetMinSize(fyne.NewSize(0, 720))
+
+	logger.Debug("右边框高度: ", MainWindow.Content().Size().Height-40)
+
+	ImgInfoTextScrollContainer.SetMinSize(fyne.NewSize(0, 760))
 
 	ImgOperateImgOperateAbilityContainer.Append(DirectionOperateAbility())
 	ReductionOperateAbility()
@@ -86,9 +87,12 @@ func MiddleContainer() *container.Split {
 
 	ImgOperateAbilityScrollContainer := container.NewVScroll(ImgOperateImgOperateAbilityContainer)
 
+	ImgOperateAbilityScrollContainerM := container.NewVSplit(ImgOperateAbilityScrollContainer, ImgEditSaveButton)
+	ImgOperateAbilityScrollContainerM.SetOffset(0.93)
+
 	tabs := container.NewAppTabs(
 		container.NewTabItemWithIcon("图片信息", theme.FileImageIcon(), ImgInfoTextScrollContainer),
-		container.NewTabItemWithIcon("图片编辑", theme.ColorPaletteIcon(), ImgOperateAbilityScrollContainer),
+		container.NewTabItemWithIcon("图片编辑", theme.ColorPaletteIcon(), ImgOperateAbilityScrollContainerM),
 	)
 
 	ImgOperateContainer.Add(tabs)

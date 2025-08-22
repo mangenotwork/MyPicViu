@@ -61,6 +61,8 @@ var ImgInfoTextContainer = widget.NewAccordion()
 
 var ImgOperateImgOperateAbilityContainer = widget.NewAccordion()
 
+var ImgEditSaveButton = container.NewVBox()
+
 // 创建弹出菜单
 var popupMenu = fyne.NewMenu("操作",
 	fyne.NewMenuItem("新建", func() {
